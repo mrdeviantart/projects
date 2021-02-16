@@ -1,0 +1,44 @@
+ // ==================================================================
+ // Base style
+ // ==================================================================
+ $white: #ffffff;
+
+ *,
+ *:before,
+ *:after {
+   box-sizing: border-box;
+ }
+
+ body {
+   margin: 0;
+   padding: 0;
+   background: $white;
+ }
+
+ a{
+   text-decoration: none;
+   color: #ffffff;
+   text-transform: uppercase;
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+   margin: 0;
+ }
+
+ p {
+   display: inline-block;
+   margin: 0;
+ }
+
+ .container {
+   width: 100%;
+   max-width: 1210px;
+   margin: 0 auto;
+   padding: 0 20px; // padding for adaptive, container still remains 1170px
+ }
+
+ span {
+   padding: 0;
+   margin: 0;
+ }
+

@@ -1,0 +1,55 @@
+// color vars =================================================================
+
+$hover-color: #e74c3c; // also active color//
+$white: #ffffff;
+
+// font-size vars =================================================================
+
+$btn-size: 14px;
+
+// ==================================================================
+// buttons style
+// ==================================================================
+
+.btn {
+  display: inline-block;
+  padding: 20px 0;
+  border: 1px solid $white;
+  border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+  font-size: $btn-size;
+  transition: all .3s;
+
+  &:hover {
+    background: $hover-color;
+    transition: all .3s;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 14px 0;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 10px;
+    padding: 12px 0;
+  }
+
+  @media (max-width: 330px) {
+    font-size: 9px;
+  }
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: flex;
+}

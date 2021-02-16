@@ -1,0 +1,147 @@
+// ==================================================================
+// history style
+// ==================================================================
+
+.history-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 135px 0;
+
+  @media (max-width: 1150px) {
+    padding: 50px 0;
+  }
+
+  .history-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    img {
+      display: block;
+      object-fit: cover;
+
+      @media (max-width: 550px) {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1150px) {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 80px;
+    }
+
+    @media (max-width: 425px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .history-description {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 1150px) {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .history-title {
+      padding-left: 35px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 700;
+      font-size: $big-title-size;
+      color: $title-color;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 39px;
+
+      @media (max-width: 768px) {
+        font-size: 30px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 25px;
+      }
+
+      @media (max-width: 320px) {
+        font-size: 22px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 6px;
+        height: 100%;
+        background: $hover-color;
+      }
+    }
+
+    .history-txt {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 400;
+      font-size: $txt-size;
+      color: $txt-color;
+      line-height: 2;
+      margin-bottom: 35px;
+
+      @media (max-width: 1150px) {
+        padding: 0 50px;
+        font-size: 16px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        padding: 0 20px;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 12px;
+      }
+
+      @media (max-width: 320px) {
+        font-size: 10px;
+      }
+
+      & p:first-child {
+        margin-bottom: 35px;
+      }
+    }
+
+    & .btn--history {
+      background: $hover-color;
+      padding-left: 40px;
+      padding-right: 40px;
+      box-shadow: 0 0 10px #c2c2c2, 0 0 20px #c2c2c2;
+
+      @media (max-width: 768px) {
+        padding: 20px 40px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 425px) {
+        padding: 15px 30px;
+        font-size: 12px;
+      }
+      
+      &:hover {
+        border: 1px solid $white;
+        background: #c93322;
+      }
+    }
+  }
+}

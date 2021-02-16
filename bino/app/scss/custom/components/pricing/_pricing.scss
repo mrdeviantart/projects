@@ -1,0 +1,366 @@
+// ==================================================================
+// pricing style
+// ==================================================================
+
+.pricing {
+  padding: 140px 0;
+
+  @media (max-width: 992px) {
+    padding: 100px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 425px) {
+    padding: 40px 0;
+  }
+}
+
+.pricing-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-item {
+    width: 32.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &:nth-child(odd) {
+      @media (max-width: 992px){
+        display: none;
+      }
+    }
+
+    @media (max-width: 992px) {
+      width: 75%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba($txt-color, 1), 0 0 20px rgba($txt-color, 1), 0 0 30px rgba($txt-color, 1);
+      background: rgba($txt-color, 1);
+    }
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+
+    &.active {
+      .pricing-plan {
+        background: $hover-color;
+
+        .plan-price {
+          .price-info {
+            .price-count,
+            .price-txt {
+              color: $hover-color;
+            }
+          }
+        }
+      }
+
+      .pricing-btn {
+        .btn--pricing {
+          background: $hover-color;
+        }
+      }
+    }
+
+    .pricing-plan {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background: $txt-color;
+      padding: 45px 0 130px;
+      position: relative;
+
+      @media (max-width: 1024px) {
+        padding-bottom: 100px;
+      }
+
+      @media (max-width: 992px) {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding-bottom: 130px;
+      }
+
+      @media (max-width: 600px) {
+        padding-bottom: 100px;
+      }
+
+      @media (max-width: 425px) {
+        padding-bottom: 80px;
+      }
+
+      @media (max-width: 320px) {
+        padding-bottom: 60px;
+      }
+
+      .plan-name {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: $title-size;
+        letter-spacing: 2px;
+        color: $white;
+        text-transform: uppercase;
+
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
+
+        @media (max-width: 992px) {
+          font-size: $title-size;
+        }
+
+        @media (max-width: 600px) {
+          font-size: 20px;
+        }
+
+        @media (max-width: 425px) {
+          font-size: 18px;
+        }
+
+        @media (max-width: 320px) {
+          font-size: 16px;
+        }
+      }
+
+      .plan-price {
+        display: flex;
+        padding: 10px;
+        background: rgba($main-color, .2);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate3d(-50%, 50%, 0);
+
+        .price-info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 150px;
+          height: 150px;
+          background: $white;
+          border-radius: 50%;
+
+          @media (max-width: 1024px) {
+            width: 120px;
+            height: 120px;
+          }
+
+          @media (max-width: 992px) {
+            height: 150px;
+            width: 150px;
+          }
+
+          @media (max-width: 600px) {
+            height: 120px;
+            width: 120px;
+          }
+
+          @media (max-width: 425px) {
+            height: 100px;
+            width: 100px;
+          }
+
+          @media (max-width: 320px) {
+            height: 80px;
+            width: 80px;
+          }
+
+          .price-count {
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 700;
+            font-size: 39px;
+            color: $txt-color;
+
+            @media (max-width: 1024px) {
+              font-size: 35px;
+            }
+
+            @media (max-width: 992px) {
+              font-size: 39px;
+            }
+
+            @media (max-width: 600px) {
+              font-size: 35px;
+            }
+
+            @media (max-width: 425px) {
+              font-size: 31px;
+            }
+
+            @media (max-width: 320px) {
+              font-size: 28px;
+            }
+          }
+
+          .price-txt {
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+            color: $txt-color;
+
+            @media (max-width: 992px){
+              font-size: 15px;
+            }
+
+            @media (max-width: 600px){
+              font-size: 14px;
+            }
+
+            @media (max-width: 425px){
+              font-size: 12px;
+            }
+
+            @media (max-width: 320px){
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .pricing-info {
+      display: flex;
+      flex-direction: column;
+      padding: 110px 0 45px;
+      background: $main-color;
+      width: 100%;
+      text-align: center;
+
+      @media (max-width: 600px) {
+        padding: 80px 0 30px;
+      }
+
+      .pricing-txt {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        font-size: $txt-size;
+        color: $txt-color;
+
+        @media (max-width: 992px) {
+          font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
+
+        @media (max-width: 400px) {
+          font-size: 12px;
+        }
+
+        @media (max-width: 325px) {
+          font-size: 11px;
+        }
+
+        &:nth-child(-n+3) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .pricing-btn {
+      padding: 45px 0;
+      background: $main-color;
+      width: 100%;
+
+      @media (max-width: 992px) {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      @media (max-width: 600px) {
+        padding-top: 30px;
+      }
+
+      @media (max-width: 425px) {
+        padding-top: 20px;
+      }
+
+      @media (max-width: 320px) {
+        padding-top: 15px;
+      }
+
+
+      .btn--pricing {
+        background: $txt-color;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .pricing-slider {
+    display: none;
+    margin-top: 30px;
+
+    @media (max-width: 992px) {
+      display: flex;
+    }
+
+    &__item {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $txt-color;
+      margin: 0 3px;
+
+      @media (max-width: 600px) {
+        width: 10px;
+        height: 10px;
+      }
+
+      @media (max-width: 425px) {
+        width: 8px;
+        height: 8px;
+      }
+
+      @media (max-width: 320px) {
+        width: 7px;
+        height: 7px;
+      }
+
+      &.active {
+        background: $hover-color;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

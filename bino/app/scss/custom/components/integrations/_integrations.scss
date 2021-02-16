@@ -1,0 +1,92 @@
+// =================================================================
+// integrations style
+// =================================================================
+
+.integrations {
+  background: $main-color;
+  border-bottom: 1px solid rgba($txt-color, .5);
+  padding: 120px 0;
+
+  @media (max-width: 992px) {
+    padding: 100px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 425px) {
+    padding: 40px 0;
+  }
+}
+
+.integrations-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -10px;
+
+  .integrations-item {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    padding: 10px 10px;
+
+    @media (max-width: 1024px) {
+      width: 25%;
+    }
+
+    @media (max-width: 768px) {
+      width: 33.333%;
+    }
+
+    @media (max-width: 600px) {
+      width: 50%;
+    }
+
+    .integrations-content {
+      height: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $white;
+      box-shadow: 0 0 5px $txt-color, 0 0 10px $txt-color;
+      transition: background .3s;
+
+      @media (max-width: 425px) {
+        height: 80px;
+      }
+
+      &:hover {
+        background: $hover-color;
+        transition: background .3s;
+      }
+
+      a {
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

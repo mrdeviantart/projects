@@ -1,0 +1,155 @@
+// ==================================================================
+// info style
+// ==================================================================
+
+.info {
+  background-color: #fff;
+  border-bottom: 1px solid #e6e7eb;
+}
+
+.info-wrapper {
+  padding: 110px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 425px) {
+    padding: 80px 0 50px;
+  }
+
+  .info-item {
+    width: 25%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:nth-child(-n+2) {
+      @media (max-width: 992px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &:nth-child(-n+3) {
+      @media (max-width: 600px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      width: 50%;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    .info-icon {
+      display: flex;
+      align-items: center;
+      width: 72px;
+      height: 72px;
+      border: 1px solid #e5e5e5;
+      margin-bottom: 30px;
+
+      @media (max-width: 425px) {
+        width: 60px;
+        height: 60px;
+      }
+
+      & svg {
+        height: 20px;
+        fill: $hover-color;
+      }
+
+      &--glasses svg {
+        height: 30px;
+      }
+    }
+
+    .info-title {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      font-size: $info-title-size;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $title-color;
+      position: relative;
+      margin-bottom: 40px;
+
+      @media (max-width: 425px) {
+        font-size: 16px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+        display: block;
+        background: #888888;
+        height: 1px;
+        width: 40px;
+      }
+    }
+
+    .info-txt {
+      padding: 0 20px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 300;
+      font-size: $txt-size;
+      line-height: 1.666;
+      color: $txt-color;
+      letter-spacing: 1px;
+
+      @media (max-width: 992px) {
+        font-size: 15px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 14px;
+      }
+    }
+
+    &.active .info-icon {
+      border: 1px solid $hover-color;
+      transform: rotate(45deg);
+    }
+
+    &.active .info-icon svg {
+      transform: rotate(-45deg);
+    }
+
+    &.active .info-title {
+      color: $hover-color;
+    }
+
+    &.active .info-title:after {
+      background: $hover-color;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
