@@ -1,0 +1,271 @@
+.section--blog {
+    padding: 100px 0;
+}
+
+.blog {
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.blog__item {
+    width: 33.3333%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.blog__img {
+    display: flex;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.blog__img img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog__photo {
+    display: flex;
+}
+
+.blog__date {
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: #95e1d3;
+    position: absolute;
+    top: 67%;
+    left: -2%;
+}
+
+.blog__day {
+    font-size: 30px;
+    line-height: 1;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.blog__month {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+}
+
+.blog__description {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__title {
+    font-size: 14px;
+    color: #333333;
+    font-weight: 600;
+    font-family: "Montserrat",sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.blog__txt {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #999999;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 20px;
+}
+
+.blog__reviews {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+    align-items: center;
+}
+
+.blog__info {
+    display: flex;
+}
+
+.blog__icon {
+    width: 25px;
+    height: 20px;
+    fill: #95e1d3;
+    margin-right: 5px;
+}
+
+.blog__stat {
+    font-size: 15px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    margin-right: 15px;
+}
+
+.blog__date__media {
+    display: none;
+    font-size: 15px;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+}
+
+/*  MEDIA ======================================================= */
+
+@media screen and (min-width: 2000px) {
+
+    .blog__date {
+        padding: 15px 20px;
+        top: 70%;
+    }
+
+    .blog__day {
+        font-size: 40px;
+    }
+
+    .blog__month {
+        font-size: 20px;
+    }
+
+    .blog__title {
+        font-size: 18px;
+    }
+
+    .blog__txt {
+        font-size: 20px;
+    }
+
+    .blog__icon {
+        width: 35px;
+        height: 30px;
+    }
+
+    .blog__stat {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .section--blog {
+        padding: 60px 0;
+    }
+
+    .blog__item {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+
+    .blog__date {
+        top: 72%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .blog__date {
+        top: 69%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .blog__item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .blog__date {
+        display: none;
+    }
+
+    .blog__img {
+        width: 40%;
+    }
+
+    .blog__description {
+        width: 60%;
+        padding-left: 15px;
+    }
+
+    .blog__date__media {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section--blog {
+        padding: 30px 0;
+    }
+
+    .blog__title {
+        font-size: 12px;
+    }
+
+    .blog__txt {
+        font-size: 12px;
+    }
+
+    .blog__icon {
+        width: 20px;
+        height: 15px;
+    }
+
+    .blog__stat {
+        font-size: 12px;
+    }
+
+    .blog__reviews {
+        padding-top: 10px;
+    }
+
+    .blog__date__media {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .blog__title {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .blog__txt {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .blog__icon {
+        width: 15px;
+        height: 12px;
+    }
+
+    .blog__stat {
+        font-size: 10px;
+    }
+
+    .blog__reviews {
+        padding-top: 5px;
+    }
+
+    .blog__date__media {
+        font-size: 10px;
+    }
+}

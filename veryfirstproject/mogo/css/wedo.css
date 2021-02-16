@@ -1,0 +1,287 @@
+.section--service {
+    padding: 100px 0;
+}
+
+.wedo {
+    width: 100%;
+    display: flex;
+}
+
+.wedo__item {
+    width: 50%;
+    overflow: hidden;
+}
+
+.wedo__item:first-child {
+    padding-right: 30px;
+}
+
+.wedo__item img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.acc__item {
+    margin-bottom: 10px;
+}
+
+
+.acc__header {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+
+.acc__item:hover .acc__header {
+    background: linear-gradient(to bottom, rgba(243, 129, 129, .7), rgba(252, 227, 138, .7));
+
+}
+
+.acc__item:hover .acc__content {
+    height: 180px;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.acc__content {
+    height: 0px;
+    overflow: auto;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #999999;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    transition: height 0.3s linear;
+    transition-delay: .1s;
+}
+
+.acc__txt {
+    padding: 15px;
+}
+
+.acc__title {
+    font-size: 14px;
+    color: #333333;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+
+.acc__txt p {
+    margin-bottom: 10px;
+}
+
+.acc__icon {
+    fill: #95e1d3;
+    width: 30px;
+    height: 30px;
+}
+
+.acc__icon--arrow {
+    fill: #cccccc;
+}
+
+.acc__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.acc__item:hover .acc__icon--arrow {
+    transform: rotate(180deg);
+    transition: all .1s linear;
+    fill: #adadad;
+}
+
+.acc__content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.acc__content::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 5px;
+}
+
+.acc__content::-webkit-scrollbar-thumb {
+    background: #95e1d3;
+    border-radius: 5px;
+}
+
+/*  MEDIA =====================================================  */
+
+@media screen and (min-width: 2000px) {
+
+    .acc__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .acc__title {
+        font-size: 18px;
+    }
+
+    .acc__content {
+        font-size: 20px;
+    }
+
+    .acc__item:hover .acc__content {
+        height: 300px;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .wedo__item:first-child {
+        padding-right: 15px;
+    }
+
+    .acc__icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .acc__title {
+        font-size: 12px;
+    }
+
+    .acc__content {
+        font-size: 12px;
+    }
+
+    .acc__item:hover .acc__content {
+        height: 120px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .section--service {
+        padding-top: 50px;
+    }
+
+    .wedo {
+        flex-direction: column;
+    }
+
+    .wedo__item {
+        width: 100%;
+    }
+
+    .wedo__item:first-child {
+        margin-bottom: 10px;
+    }
+
+    .acc__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .acc__item:hover .acc__content {
+        height: 200px;
+    }
+
+    .acc__content {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section--service {
+        padding-bottom: 40px;
+    }
+
+    .wedo {
+        flex-direction: column;
+    }
+
+    .wedo__item {
+        width: 100%;
+    }
+
+    .wedo__item:first-child {
+        margin-bottom: 10px;
+    }
+
+    .acc__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .acc__item:hover .acc__content {
+        height: 200px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .section__txt--wedo {
+        margin-bottom: 40px;
+    }
+
+    .section--service {
+        padding-top: 35px;
+        padding-bottom: 20px;
+    }
+
+    .acc__header {
+        padding: 10px;
+    }
+
+    .acc__icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .acc__title {
+        font-size: 10px;
+    }
+
+    .acc__item:hover .acc__content {
+        height: 100px;
+    }
+
+    .acc__txt {
+        padding: 8px;
+    }
+
+    .acc__content {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .acc__header {
+        padding: 8px;
+    }
+
+    .acc__icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .acc__title {
+        font-size: 8px;
+    }
+
+    .acc__item:hover .acc__content {
+        height: 100px;
+    }
+
+    .acc__txt {
+        padding: 8px;
+    }
+
+    .acc__content {
+        font-size: 8px;
+    }
+}

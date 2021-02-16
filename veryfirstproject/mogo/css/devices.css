@@ -1,0 +1,52 @@
+.section--devices {
+    background: url("../img/devices/devices-bg.jpg") center no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+}
+
+.devices {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.devices__phone {
+    position: absolute;
+    top: 34%;
+    left: 63%;
+    z-index: 1;
+}
+
+/*  MEDIA =====================================================  */
+
+@media screen and (min-width: 2000px) {
+
+    .devices__phone {
+        left: 59%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+
+    .devices__phone {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section--devices {
+        padding-top: 40px;
+    }
+
+    .devices__phone {
+        display: block;
+        position: static;
+    }
+
+    .devices__tablet {
+        display: none;
+    }
+}
