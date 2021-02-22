@@ -1,3 +1,33 @@
 // ==================================================================
 // ========================buttons style=============================
 // ==================================================================
+
+.btn {
+    padding: 13px 35px 15px 34px;
+    display: flex;
+    align-items: center;
+    background: $main-color;
+    border-radius: 5px;
+
+    p {
+        font-family: $main-font;
+        font-weight: $medium;
+        font-size: $btn-size;
+        line-height: 1.333;
+        text-align: center;
+        color: $white;
+        margin-right: 10px;
+    }
+
+    img {
+        height: 16px;
+    }
+
+    &--big {
+        padding: 16px 33px 20px;
+    }
+    
+    &:hover {
+        background: #09c58a;
+    }
+}
