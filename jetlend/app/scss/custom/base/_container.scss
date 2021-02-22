@@ -2,3 +2,9 @@
 // =========================container style==========================
 // ==================================================================
 
+.container {
+    width: 100%;
+    max-width: 1320px; //container still remains 1280px as in psd
+    padding: 0 20px; //container still remains 1280px as in psd
+    margin: 0 auto;
+}

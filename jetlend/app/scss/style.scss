@@ -1,9 +1,16 @@
-@import "custom/vars/fonts";
+
+// Include custom variables
 @import "custom/vars/color";
 @import "custom/vars/sizes";
+@import "custom/vars/typo";
+
+//Include custom base
 @import "custom/base/base";
 @import "custom/base/buttons";
 @import "custom/base/container";
+@import "custom/base/fonts";
+
+//Include components
 @import "custom/components/components";
 
 

@@ -1,0 +1,39 @@
+//--------------------------------------------------------------
+// Fonts
+//--------------------------------------------------------------
+
+@font-face {
+    font-family: 'Red Ring';
+    src: url('../fonts/RedRing-Light.eot');
+    src: local('Red Ring Light'), local('RedRing-Light'),
+    url('../fonts/RedRing-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RedRing-Light.woff2') format('woff2'),
+    url('../fonts/RedRing-Light.woff') format('woff'),
+    url('../fonts/RedRing-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Red Ring';
+    src: url('../fonts/RedRing-Medium.eot');
+    src: local('Red Ring Medium'), local('RedRing-Medium'),
+    url('../fonts/RedRing-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RedRing-Medium.woff2') format('woff2'),
+    url('../fonts/RedRing-Medium.woff') format('woff'),
+    url('../fonts/RedRing-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Red Ring';
+    src: url('../fonts/RedRing-Regular.eot');
+    src: local('Red Ring Regular'), local('RedRing-Regular'),
+    url('../fonts/RedRing-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RedRing-Regular.woff2') format('woff2'),
+    url('../fonts/RedRing-Regular.woff') format('woff'),
+    url('../fonts/RedRing-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
