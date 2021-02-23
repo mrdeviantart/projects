@@ -1,0 +1,25 @@
+// ==================================================================
+// =========================title style=============================
+// ==================================================================
+
+.general-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    h2 {
+        font-family: $main-font;
+        font-weight: $medium;
+        font-size: $title-size;
+        line-height: 1.35;
+
+        color: $black;
+    }
+
+    &--white {
+
+        h2 {
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+// ==================================================================
+// =========================benefits style=============================
+// ==================================================================
+
+.benefits-wrapper {
+    padding: 60px 0 65px;
+
+    .benefits-content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 37px -10px 0;
+
+        .benefits-item {
+            display: flex;
+            width: 33.33333%;
+            padding: 0 10px;
+
+            &-wrapper {
+                padding: 41px 70px 48px 50px;
+
+                background: $bf-item-color;
+
+                .benefits-item-title {
+                    margin-bottom: 19px;
+
+                    h3 {
+                        font-family: $main-font;
+                        font-weight: $medium;
+                        font-size: $bf-title-size;
+                        line-height: 1.32;
+
+                        color: $black;
+                    }
+                }
+
+                .benefits-item-txt {
+
+                    p {
+                        font-family: $main-font;
+                        font-weight: $light;
+                        font-size: $txt-size;
+                        line-height: 1.31;
+
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}

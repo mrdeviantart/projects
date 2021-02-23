@@ -31,6 +31,12 @@ ol, ul { list-style: none; }
 
 @font-face { font-family: 'Red Ring'; src: url("../fonts/RedRing-Regular.eot"); src: local("Red Ring Regular"), local("RedRing-Regular"), url("../fonts/RedRing-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/RedRing-Regular.woff2") format("woff2"), url("../fonts/RedRing-Regular.woff") format("woff"), url("../fonts/RedRing-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
+.general-title { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; text-align: center; }
+
+.general-title h2 { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 35px; line-height: 1.35; color: #000000; }
+
+.general-title--white h2 { color: #ffffff; }
+
 .header { overflow: hidden; }
 
 .header-wrapper { padding: 34px 0; display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-align: center; align-items: center; }
@@ -300,5 +306,19 @@ ol, ul { list-style: none; }
 @media (max-width: 500px) { .intro-wrapper .intro-img img { width: 40%; height: 40%; } }
 
 @media (max-width: 425px) { .intro-wrapper .intro-img img { width: 33%; height: 33%; } }
+
+.benefits-wrapper { padding: 60px 0 65px; }
+
+.benefits-wrapper .benefits-content { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; width: 100%; margin: 37px -10px 0; }
+
+.benefits-wrapper .benefits-content .benefits-item { display: -ms-flexbox; display: flex; width: 33.33333%; padding: 0 10px; }
+
+.benefits-wrapper .benefits-content .benefits-item-wrapper { padding: 41px 70px 48px 50px; background: #F0F5F6; }
+
+.benefits-wrapper .benefits-content .benefits-item-wrapper .benefits-item-title { margin-bottom: 19px; }
+
+.benefits-wrapper .benefits-content .benefits-item-wrapper .benefits-item-title h3 { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 25px; line-height: 1.32; color: #000000; }
+
+.benefits-wrapper .benefits-content .benefits-item-wrapper .benefits-item-txt p { font-family: "Red Ring", sans-serif; font-weight: 300; font-size: 13px; line-height: 1.31; color: #000000; }
 
 /*# sourceMappingURL=style.css.map */
