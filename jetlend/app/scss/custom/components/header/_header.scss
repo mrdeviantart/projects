@@ -2,13 +2,29 @@
 // =========================header style=============================
 // ==================================================================
 
+.header {
+    //background: #cccccc;
+}
+
 .header-wrapper {
     padding: 34px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 992px) {
+        padding: 25px 0;
+    }
+
     .logo {
+
+        @media (max-width: 1200px) {
+            width: 240px;
+        }
+
+        @media (max-width: 600px) {
+            width: 200px;
+        }
 
         img {
             display: block;
@@ -23,8 +39,16 @@
         justify-content: center;
         align-items: center;
 
+        @media (max-width: 992px) {
+            display: none;
+        }
+
         .nav {
             margin-right: 140px;
+
+            @media (max-width: 1200px) {
+                margin-right: 40px;
+            }
 
             ul {
 
@@ -40,6 +64,10 @@
 
                         &:nth-child(-n+2) {
                             margin: 0 30px;
+
+                            @media (max-width: 1200px) {
+                                margin: 15px;
+                            }
                         }
 
                         &:nth-child(n+3) {
@@ -64,6 +92,139 @@
                             width: 100%;
                             transition: .3s linear;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .burger-btn {
+        display: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: $main-color;
+        position: relative;
+        z-index: 1000;
+
+        @media (max-width: 992px) {
+            display: block;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            background: $black;
+
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background: $black;
+                transition: .3s;
+            }
+
+            &:before {
+                transform: translateY(-7px);
+            }
+
+            &:after {
+                transform: translateY(7px);
+            }
+        }
+
+        &-active {
+            border: 1px solid $black;
+
+            span {
+                height: 0;
+
+                &:before {
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 300px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transform-origin: right center;
+        background: $main-color;
+        transition: .3s linear;
+        transition-delay: .3s;
+
+        @media (max-width: 600px) {
+            width: 50%;
+        }
+
+        @media (max-width: 400px) {
+            width: 70%;
+        }
+
+        &-active {
+            transform: translateX(0);
+            transition: .3s linear;
+        }
+
+        .burger-nav {
+            transform: translateY(150%);
+            transform-origin: bottom center;
+            transition-delay: .3s;
+            transition: .3s linear;
+
+            &-active {
+                transform: translateY(0);
+                transition: .3s linear;
+                transition-delay: .3s;
+            }
+
+            ul {
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+
+                    .burger-link {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        margin: 8px 0;
+                        padding: 10px 5px;
+                        font-family: $main-font;
+                        font-weight: $medium;
+                        font-size: $burger-link-size;
+                        line-height: 1.35;
+                        color: $black;
+                        border: 1px solid $black;
+                        border-radius: 5px;
+                    }
+
+                    .button {
+                        color: $white;
+                        border-color: $white;
                     }
                 }
             }
