@@ -1,9 +1,8 @@
 // ==================================================================
 // =========================header style=============================
 // ==================================================================
-
 .header {
-    //background: #cccccc;
+    overflow: hidden;
 }
 
 .header-wrapper {
@@ -166,9 +165,10 @@
         text-align: center;
         height: 100%;
         width: 300px;
-        position: absolute;
+        position: fixed;
         right: 0;
         top: 0;
+        z-index: 999;
         transform: translateX(100%);
         transform-origin: right center;
         background: $main-color;

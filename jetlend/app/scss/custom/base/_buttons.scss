@@ -8,12 +8,18 @@
     align-items: center;
     background: $main-color;
     border-radius: 5px;
+    font-family: $main-font;
+    font-weight: $medium;
+    font-size: $btn-size;
+    line-height: 1.35;
+    text-align: center;
+    color: $white;
 
     p {
         font-family: $main-font;
         font-weight: $medium;
         font-size: $btn-size;
-        line-height: 1.333;
+        line-height: 1.35;
         text-align: center;
         color: $white;
         margin-right: 10px;
@@ -25,6 +31,12 @@
 
     &--big {
         padding: 16px 33px 20px;
+
+        @media (max-width: 500px) {
+            font-size: 14px;
+            padding: 12px 30px;
+        }
+
     }
     
     &:hover {
