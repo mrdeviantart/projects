@@ -15,6 +15,10 @@
     width: 100%;
     margin-top: 54px;
 
+    @media (max-width: 768px) {
+        margin-top: 30px;
+    }
+
     .stages-location {
         width: 100%;
         display: flex;
@@ -29,7 +33,13 @@
         }
 
         @media (max-width: 768px) {
-            padding: 0;
+            padding: 0 0 0 17%;
+            flex-direction: column;
+            justify-content: center;
+
+            @media (max-width: 500px) {
+                padding-left: 4%;
+            }
         }
 
         .location-item {
@@ -40,6 +50,13 @@
             text-align: center;
 
             position: relative;
+
+            @media (max-width: 768px) {
+                flex-direction: row;
+                width: auto;
+                margin-bottom: 40px;
+                text-align: left;
+            }
 
             &.active {
                 .location-number {
@@ -67,9 +84,11 @@
                     height: 3px;
                     background: $main-color;
 
-                    @media (max-width: 600px) {
-                        top: 15px;
-                        right: -17.5px;
+                    @media (max-width: 768px) {
+                        width: 3px;
+                        height: 50%;
+                        left: 18.5px;
+                        top: 40px;
                     }
                 }
             }
@@ -90,6 +109,13 @@
                         top: 15px;
                         left: -17.5px;
                     }
+
+                    @media (max-width: 768px) {
+                        width: 3px;
+                        height: 50%;
+                        left: 18.5px;
+                        top: -20px;
+                    }
                 }
             }
 
@@ -105,9 +131,11 @@
                     height: 3px;
                     background: $main-color;
 
-                    @media (max-width: 600px) {
-                        top: 15px;
-                        left: -17.5px;
+                    @media (max-width: 768px) {
+                        width: 3px;
+                        height: 50%;
+                        left: 18.5px;
+                        top: -20px;
                     }
                 }
 
@@ -121,9 +149,11 @@
                     height: 3px;
                     background: $main-color;
 
-                    @media (max-width: 600px) {
-                        top: 15px;
-                        right: -17.5px;
+                    @media (max-width: 768px) {
+                        width: 3px;
+                        height: 50%;
+                        left: 18.5px;
+                        top: 40px;
                     }
                 }
             }
@@ -147,18 +177,11 @@
                 margin-bottom: 18px;
 
                 @media (max-width: 768px) {
-                    font-size: 13px;
+                    margin: 0 20px 0 0;
                 }
 
-                @media (max-width: 600px) {
-                    width: 35px;
-                    height: 35px;
-
-                    font-size: 12px;
-                }
-
-                @media (max-width: 420px) {
-                    font-size: 11px;
+                @media (max-width: 430px) {
+                    margin-right: 10px;
                 }
             }
 
@@ -166,7 +189,7 @@
                 padding: 0 50px;
 
                 @media (max-width: 768px) {
-                    padding: 0 20px;
+                    padding: 0;
                 }
 
                 p {
@@ -177,16 +200,12 @@
 
                     color: $white;
 
-                    @media (max-width: 768px) {
+                    @media (max-width: 430px) {
                         font-size: 13px;
                     }
 
-                    @media (max-width: 600px) {
+                    @media (max-width: 370px) {
                         font-size: 12px;
-                    }
-
-                    @media (max-width: 420px) {
-                        font-size: 11px;
                     }
                 }
             }

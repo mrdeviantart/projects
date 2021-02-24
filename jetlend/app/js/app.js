@@ -19,8 +19,6 @@ $(document).on("click", function (e) {
         burgerBtn.removeClass("burger-btn-active")
         burgerMenu.removeClass("burger-menu-active");
         burgerNav.removeClass("burger-nav-active");
-
-        console.log("hi");
     }
 });
 
