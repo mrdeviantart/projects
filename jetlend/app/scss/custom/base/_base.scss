@@ -44,6 +44,12 @@
  a {
      text-decoration: none;
      color: $black;
+     outline: none;
+
+     &:focus,
+     &:active {
+         outline: none;
+     }
  }
 
  ol, ul {
