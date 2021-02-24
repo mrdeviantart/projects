@@ -3,23 +3,51 @@
 // ==================================================================
 
 .benefits-wrapper {
-    padding: 60px 0 65px;
+    padding: 60px 0 45px;
 
     .benefits-content {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         width: 100%;
         margin: 37px -10px 0;
+
+        @media (max-width: 768px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
 
         .benefits-item {
             display: flex;
             width: 33.33333%;
             padding: 0 10px;
 
+            margin-bottom: 20px;
+
+            @media (max-width: 1024px) {
+                width: 50%;
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+
             &-wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
                 padding: 41px 70px 48px 50px;
 
                 background: $bf-item-color;
+
+                @media (max-width: 768px) {
+                    align-items: center;
+                    text-align: center;
+                }
+
+                @media (max-width: 600px) {
+                    padding: 30px;
+                }
 
                 .benefits-item-title {
                     margin-bottom: 19px;
@@ -31,10 +59,23 @@
                         line-height: 1.32;
 
                         color: $black;
+
+                        @media (max-width: 600px) {
+                            font-size: 22px;
+                        }
+
+                        @media (max-width: 425px) {
+                            font-size: 20px;
+                        }
                     }
                 }
 
                 .benefits-item-txt {
+
+                    @media (max-width: 768px) {
+                        align-items: center;
+                        text-align: center;
+                    }
 
                     p {
                         font-family: $main-font;
@@ -43,6 +84,18 @@
                         line-height: 1.31;
 
                         color: $black;
+
+                        @media (max-width: 768px) {
+                            font-size: 15px;
+                        }
+
+                        @media (max-width: 600px) {
+                            font-size: 14px;
+                        }
+
+                        @media (max-width: 425px) {
+                            font-size: 13px;
+                        }
                     }
                 }
             }
