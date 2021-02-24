@@ -1,0 +1,128 @@
+// ==================================================================
+// =========================stages style=============================
+// ==================================================================
+
+.stages {
+    background: $bg-rg-color;
+    padding: 82px 0 287px;
+}
+
+.stages-wrapper {
+    width: 100%;
+    margin-top: 54px;
+
+    .stages-location {
+        width: 100%;
+        display: flex;
+        padding: 0 150px;
+
+        .location-item {
+            width: 33.33333%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            position: relative;
+
+            &.active {
+                .location-number {
+                    background: $main-color;
+                    box-shadow: 0 0 10px $main-color;
+                }
+
+                .location-txt {
+
+                    p {
+                        font-weight: $medium;
+                    }
+                }
+            }
+
+            &:first-child {
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 18.5px;
+                    right: -20px;
+                    display: block;
+                    width: 50%;
+                    height: 3px;
+                    background: $main-color;
+                }
+            }
+
+            &:last-child {
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 18.5px;
+                    left: -20px;
+                    display: block;
+                    width: 50%;
+                    height: 3px;
+                    background: $main-color;
+                }
+            }
+
+            &:nth-child(2) {
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 18.5px;
+                    left: -20px;
+                    display: block;
+                    width: 50%;
+                    height: 3px;
+                    background: $main-color;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 18.5px;
+                    right: -20px;
+                    display: block;
+                    width: 50%;
+                    height: 3px;
+                    background: $main-color;
+                }
+            }
+
+            .location-number {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid $main-color;
+                border-radius: 50%;
+
+                font-family: $main-font;
+                font-weight: $medium;
+                font-size: $stage-txt-size;
+                line-height: 1.34;
+
+                color: $white;
+
+                margin-bottom: 18px;
+            }
+
+            .location-txt {
+                padding: 0 50px;
+
+                p {
+                    font-family: $main-font;
+                    font-weight: $light;
+                    font-size: $stage-txt-size;
+                    line-height: 1.34;
+
+                    color: $white;
+                }
+            }
+        }
+    }
+}
