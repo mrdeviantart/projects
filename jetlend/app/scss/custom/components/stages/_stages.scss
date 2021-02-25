@@ -6,14 +6,66 @@
     background: $bg-rg-color;
     padding: 82px 0 287px;
 
+    position: relative;
+
+    overflow: hidden;
+
     @media (max-width: 600px) {
         padding-top: 50px;
+    }
+
+    .stages-circles {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1064px;
+        height: 1064px;
+        border: 1px solid #235660;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+        transform: translate3d(-50%, -50%, 0);
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 870px;
+            height: 870px;
+            border: 1px solid #235660;
+            border-radius: 50%;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 684px;
+                height: 684px;
+                border: 1px solid #235660;
+                border-radius: 50%;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 494px;
+                    height: 494px;
+                    border: 1px solid #235660;
+                    border-radius: 50%;
+                }
+            }
+        }
     }
 }
 
 .stages-wrapper {
     width: 100%;
     margin-top: 54px;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: 768px) {
         margin-top: 30px;

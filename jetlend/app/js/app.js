@@ -50,3 +50,25 @@ function checkScroll(scrollOffset) {
     }
 
 }
+
+//--------------------------------------------------------------
+// form
+//--------------------------------------------------------------
+
+//----------------------watching slider position----------------
+const sumSlider = $("#sumSlider");
+let sumFill = $(".sum-fill");
+const termSlider = $("#termSlider");
+let termFill = $(".term-fill");
+
+function setSumBar() {
+    sumFill.css("width", sumSlider.val()*(100/9500000) + "%");
+}
+sumSlider.on("input", setSumBar);
+setSumBar();
+
+function setTermBar() {
+    termFill.css("width", termSlider.val()*(100/11) + "%");
+}
+termSlider.on("input", setTermBar);
+setTermBar();

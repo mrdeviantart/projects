@@ -6,6 +6,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
 
     h2 {
         font-family: $main-font;
