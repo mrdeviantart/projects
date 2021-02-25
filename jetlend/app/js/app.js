@@ -29,7 +29,7 @@ $(document).on("click", function (e) {
 //--------------------------------------------------------------
 
 const header = $(".header");
-const headerHeight = $(".header").innerHeight();
+const headerHeight = header.innerHeight();
 const main = $(".main");
 let scrollOffset = $(window).scrollTop();
 
@@ -55,20 +55,111 @@ function checkScroll(scrollOffset) {
 // form
 //--------------------------------------------------------------
 
-//----------------------watching slider position----------------
-const sumSlider = $("#sumSlider");
-let sumFill = $(".sum-fill");
-const termSlider = $("#termSlider");
-let termFill = $(".term-fill");
+//---------------------------------------sum slider
 
+const sumInput = $("#sum");
+const sumSlider = $("#sumSlider");
+const sumFill = $(".sum-fill");
+const sumMaxValue = sumSlider.attr("max");
+const sumMinActualValue = sumInput.attr("min");
+const sumMinValue = +sumSlider.attr("min") + +sumMinActualValue;
+const sumStepValue = sumSlider.attr("step");
+
+//watch input value and throw it to slider
+function watchSumValue() {
+    v = parseInt($(this).val());
+    min = parseInt($(this).attr("min"));
+    max = parseInt($(this).attr("max"));
+
+    if (v < min) {
+        $(this).val(min);
+        sumSlider.attr("value", min - +sumStepValue);
+        showSumCurrentValue();
+        setSumBar();
+    } else if (v > max) {
+        $(this).val(max);
+        sumSlider.attr("value", max - +sumStepValue);
+        showSumCurrentValue();
+        setSumBar();
+    } else {
+        sumSlider.attr("value", v - +sumStepValue);
+        showSumCurrentValue();
+        setSumBar();
+    }
+}
+sumInput.on("change", watchSumValue);
+//end watching
+
+//watching slider current value
+function showSumCurrentValue() {
+    const sumCurrentValue = +sumSlider.val() + +sumMinValue;
+    $(sumInput).attr("value", sumCurrentValue);
+}
+sumSlider.on("input", showSumCurrentValue);
+showSumCurrentValue();
+//end watching
+
+//watching slider position
 function setSumBar() {
-    sumFill.css("width", sumSlider.val()*(100/9500000) + "%");
+    sumFill.css("width", sumSlider.val()*(100/sumMaxValue) + "%");
 }
 sumSlider.on("input", setSumBar);
 setSumBar();
+//end watching
 
+//----------------------------------------------------------------------
+
+//------------------------------------------term slider
+const termInput = $("#term");
+// const termInputValue = termInput.val();
+const termSlider = $("#termSlider");
+const termFill = $(".term-fill");
+const termMaxValue = termSlider.attr("max");
+const termMinValue = termSlider.attr("min");
+const termStepValue = termSlider.attr("step");
+
+//watch input value and throw it to slider
+function watchTermValue() {
+    v = parseInt($(this).val());
+    min = parseInt($(this).attr("min"));
+    max = parseInt($(this).attr("max"));
+
+    if (v < min) {
+        $(this).val(min);
+        termSlider.attr("value", min - +termStepValue);
+        showTermCurrentValue();
+        setTermBar();
+    } else if (v > max) {
+        $(this).val(max);
+        termSlider.attr("value", max - +termStepValue);
+        showTermCurrentValue();
+        setTermBar();
+    } else {
+        termSlider.attr("value", v - +termStepValue);
+        showTermCurrentValue();
+        setTermBar();
+    }
+}
+termInput.on("change", watchTermValue);
+//end watching
+
+//watching slider current value
+function showTermCurrentValue() {
+    const termCurrentValue = +termSlider.val() + +termMinValue + +termStepValue;
+    $(termInput).attr("value", termCurrentValue);
+}
+termSlider.on("input", showTermCurrentValue);
+showTermCurrentValue();
+//end watching
+
+//watching slider position
 function setTermBar() {
-    termFill.css("width", termSlider.val()*(100/11) + "%");
+    termFill.css("width", termSlider.val()*(100/termMaxValue) + "%");
 }
 termSlider.on("input", setTermBar);
-setTermBar();
+setTermBar();//end watching
+
+//----------------------------------------------------------------------
+
+// payment count = current sum value / current term value
+

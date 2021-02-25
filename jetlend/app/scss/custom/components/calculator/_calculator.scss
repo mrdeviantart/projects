@@ -13,7 +13,7 @@
         display: flex;
 
         .form {
-            width: 75%;
+            width: 65%;
 
             display: flex;
             flex-direction: column;
@@ -23,34 +23,58 @@
                 flex-direction: column;
                 margin-bottom: 27px;
 
-                label {
-                    margin-bottom: 12px;
-                }
+                .input {
+                    display: flex;
+                    flex-direction: column;
 
-                #sum,
-                #term {
-                    font-family: $main-font;
-                    font-weight: $medium;
-                    font-size: $calc-sum-size;
-                    line-height: 1.32;
+                    position: relative;
 
-                    color: $black;
+                    .input-txt {
+                        font-family: $main-font;
+                        font-weight: $medium;
+                        font-size: $calc-sum-size;
+                        line-height: 1.32;
 
-                    border: 1px solid #E4ECEE;
-                    border-radius: 5px;
-
-                    padding: 14px 24px 17px 24px;
-
-                    &::placeholder {
                         color: $black;
                     }
 
-                    &::-ms-input-placeholder,
-                    &::-webkit-input-placeholder,
-                    &::-moz-placeholder {
+                    .sum-txt {
+                        position: absolute;
+                        top: 44%;
+                        left: 21%;
+                    }
+
+                    .term-txt {
+                        position: absolute;
+                        top: 44%;
+                        left: 8%;
+                    }
+
+                    label {
+                        margin-bottom: 12px;
+                    }
+
+                    #sum,
+                    #term {
+                        font-family: $main-font;
+                        font-weight: $medium;
+                        font-size: $calc-sum-size;
+                        line-height: 1.32;
+
                         color: $black;
+
+                        border: 1px solid #E4ECEE;
+                        border-radius: 5px;
+
+                        padding: 14px 24px 17px 24px;
+
+                        &::placeholder {
+                            color: $black;
+                        }
                     }
                 }
+
+
 
                 .range-slider {
                     display: flex;
@@ -119,7 +143,51 @@
         }
 
         .calc-info {
-            width: 25%;
+            width: 35%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding-bottom: 10px;
+
+            .payment-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                padding-bottom: 33px;
+                margin-bottom: 38px;
+
+                border-bottom: 3px solid $black;
+
+                .payment-txt {
+                    margin-bottom: 11px;
+
+                    p {
+                        font-family: $main-font;
+                        font-weight: $light;
+                        font-size: $txt-size;
+                        line-height: 1.31;
+
+                        color: $black;
+                    }
+                }
+
+                .payment-count {
+
+                    p {
+                        font-family: $main-font;
+                        font-weight: $medium;
+                        font-size: $calc-sum-size;
+                        line-height: 1.32;
+
+                        color: $black;
+                    }
+                }
+            }
         }
     }
 }

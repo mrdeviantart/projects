@@ -267,11 +267,14 @@
                         <div class="form">
 
                             <div class="form-item">
-                                <label for="sum">Желаемая сумма кредита</label>
-                                <input id="sum" type="number" placeholder="1 000 000 ₽">
+                                <div class="input">
+                                    <span class="input-txt sum-txt">₽</span>
+                                    <label for="sum">Желаемая сумма кредита</label>
+                                    <input id="sum" type="number" value="1000000" min="500000" max="10000000">
+                                </div>
                                 <div class="range-slider">
                                     <span class="bar"><span class="fill sum-fill"></span></span>
-                                    <input type="range" id="sumSlider" min="0" max="9500000" step="500000" value="500000">
+                                    <input type="range" id="sumSlider" min="0" max="9500000" step="1" value="500000">
                                 </div>
                                 <div class="range-txt">
                                     <p>500 000 руб.</p>
@@ -280,11 +283,14 @@
                             </div>
 
                             <div class="form-item">
-                                <label for="term">Срок кредита</label>
-                                <input id="term" type="number" placeholder="5 мес.">
+                                <div class="input">
+                                    <span class="input-txt term-txt">мес.</span>
+                                    <label for="term">Срок кредита</label>
+                                    <input id="term" type="number" value="5" min="1" max="12">
+                                </div>
                                 <div class="range-slider">
-                                    <span class="bar"><span class="fill term-fill"></span></span>
-                                    <input type="range" id="termSlider" min="0" max="11" step="1" value="5">
+                                    <span class="bar term-bar"><span class="fill term-fill"></span></span>
+                                    <input type="range" id="termSlider" min="0" max="11" step="1" value="4">
                                 </div>
                                 <div class="range-txt">
                                     <p>1 месяц</p>
@@ -294,7 +300,24 @@
 
                         </div>
                         
-                        <div class="calc-info"></div>
+                        <div class="calc-info">
+
+                            <div class="payment-info">
+                                <div class="payment-txt">
+                                    <p>Ежемесячный платеж</p>
+                                </div>
+                                <div class="payment-count">
+                                    <p>1 000 000 ₽</p>
+                                </div>
+                            </div>
+
+                            <div class="payment-btn">
+
+                                <button class="btn btn--big" type="submit">Получить кредит</button>
+
+                            </div>
+
+                        </div>
                         
                     </form>
 
