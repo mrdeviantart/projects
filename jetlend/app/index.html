@@ -6,6 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.css">
+    <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.structure.css">
+    <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.theme.css">
     <title>Document</title>
 </head>
 <body>
@@ -197,135 +200,138 @@
 
     </div>
 
-    <!-----------------------------------Stages----------------------------------------->
+    <!--------------------------------multi-step-form------------------------------------->
 
-    <div class="stages">
+    <div class="multi-step-form">
 
-        <div class="container">
+        <!---------------------------------Stages---------------------------------------->
 
-            <div class="general-title general-title--white">
-                <h2>Как получить оборотный кредит</h2>
-            </div>
+        <div class="stages">
 
-            <div class="stages-wrapper">
+            <div class="container">
 
-                <div class="stages-location">
+                <div class="general-title general-title--white">
+                    <h2>Как получить оборотный кредит</h2>
+                </div>
 
-                    <div class="location-item active">
-                        <div class="location-number">1</div>
-                        <div class="location-txt"><p>Пройдите регистрацию</p></div>
-                    </div>
+                <div class="stages-wrapper">
 
-                    <div class="location-item">
-                        <div class="location-number">2</div>
-                        <div class="location-txt"><p>Получите предварительное решение</p></div>
-                    </div>
+                    <div class="stages-location">
 
-                    <div class="location-item">
-                        <div class="location-number">3</div>
-                        <div class="location-txt"><p>Пройдите верификацию и получите деньги</p></div>
+                        <div class="location-item active">
+                            <div class="location-number">1</div>
+                            <div class="location-txt"><p>Пройдите регистрацию</p></div>
+                        </div>
+
+                        <div class="location-item">
+                            <div class="location-number">2</div>
+                            <div class="location-txt"><p>Получите предварительное решение</p></div>
+                        </div>
+
+                        <div class="location-item">
+                            <div class="location-number">3</div>
+                            <div class="location-txt"><p>Пройдите верификацию и получите деньги</p></div>
+                        </div>
+
                     </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-        <div class="stages-circles">
-            <div>
+            <div class="stages-circles">
                 <div>
-                    <div></div>
+                    <div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
+
         </div>
 
-        <!--------------------------------Calculator--------------------------------------->
+        <!---------------------------------Form---------------------------------------->
 
-        <div class="calculator"></div>
+        <div class="container form-container">
 
-    </div>
-
-    <!----------------------------Partners + Calculator-------------------------------->
-
-    <div class="partners">
-
-        <div class="container">
-
-            <!-----------------------------Calculator------------------------------------->
-
-            <div class="calc">
+            <div class="form-wrapper">
 
                 <div class="general-title">
                     <h2>Калькулятор заемщика</h2>
                 </div>
 
-                <div class="calc-wrapper">
+                <form action="/" class="form">
 
-                    <form action="#" class="calc-form">
-                        
-                        <div class="form">
+                    <div class="form-input">
 
-                            <div class="form-item">
-                                <div class="input">
-                                    <span class="input-txt sum-txt">₽</span>
-                                    <label for="sum">Желаемая сумма кредита</label>
-                                    <input id="sum" type="number" value="1000000" min="500000" max="10000000">
-                                </div>
-                                <div class="range-slider">
-                                    <span class="bar"><span class="fill sum-fill"></span></span>
-                                    <input type="range" id="sumSlider" min="0" max="9500000" step="1" value="500000">
-                                </div>
-                                <div class="range-txt">
-                                    <p>500 000 руб.</p>
-                                    <p>10 000 000 руб.</p>
-                                </div>
+                        <div class="input-item">
+
+                            <label for="sum-input" class="input-name">Желаемая сумма кредита</label>
+                            <input type="text" id="sum-input" min="500000" max="10000000" value="1000000">
+                            <div class="input-sums">
+                                <p class="min-sum">500 000 руб.</p>
+                                <p class="max-sum">10 000 000 руб.</p>
                             </div>
+                            
+                        </div>
 
-                            <div class="form-item">
-                                <div class="input">
-                                    <span class="input-txt term-txt">мес.</span>
-                                    <label for="term">Срок кредита</label>
-                                    <input id="term" type="number" value="5" min="1" max="12">
-                                </div>
-                                <div class="range-slider">
-                                    <span class="bar term-bar"><span class="fill term-fill"></span></span>
-                                    <input type="range" id="termSlider" min="0" max="11" step="1" value="4">
-                                </div>
-                                <div class="range-txt">
-                                    <p>1 месяц</p>
-                                    <p>12 месяцев</p>
-                                </div>
+                        <div class="input-item">
+
+                            <label for="term-input" class="input-name">Срок кредита</label>
+                            <input type="text" id="term-input" min="1" max="12" value="5">
+                            <div class="input-terms">
+                                <p class="min-term">1 месяц</p>
+                                <p class="max-term">12 месяцев</p>
                             </div>
 
                         </div>
-                        
-                        <div class="calc-info">
 
-                            <div class="payment-info">
-                                <div class="payment-txt">
+                    </div>
+
+                    <div class="form-submit">
+
+                        <div class="submit-wrapper">
+
+                            <div class="submit-info">
+
+                                <div class="submit-txt">
                                     <p>Ежемесячный платеж</p>
                                 </div>
-                                <div class="payment-count">
-                                    <p>1 000 000 ₽</p>
+
+                                <div class="submit-value">
+                                    <p>200 000 ₽</p>
                                 </div>
-                            </div>
-
-                            <div class="payment-btn">
-
-                                <button class="btn btn--big" type="submit">Получить кредит</button>
 
                             </div>
+
+                            <button class="btn submit-btn" type="submit">Получить кредит</button>
 
                         </div>
-                        
-                    </form>
 
-                </div>
+                    </div>
+
+                </form>
 
             </div>
 
-            <!-----------------------------Partners------------------------------------->
+        </div>
+
+    </div>
+
+    <!-------------------------------------partners---------------------------------------->
+
+    <div class="partners">
+
+        <div class="container">
+
+            <div class="general-title">
+                <h2>СМИ о нас <span>Наши партнеры</span></h2>
+            </div>
+
+            <div class="partners-wrapper">
+
+                <div class="partners-logo"></div>
+
+            </div>
 
         </div>
 
@@ -336,6 +342,8 @@
 <!--------------------------------------Footer---------------------------------------------->
 
 <script src="js/jQuery/_jquery.min.js"></script>
+<script src="libs/jqueryui-slider/external/jquery/jquery.js"></script>
+<script src="libs/jqueryui-slider/jquery-ui.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,162 @@
+// ==================================================================
+// =========================form style=============================
+// ==================================================================
+
+.form-container {
+    position: absolute;
+    bottom: -45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form-wrapper {
+    padding: 50px 125px 54px 108px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: $white;
+
+    .form {
+        display: flex;
+
+        margin-top: 27px;
+
+        .form-input {
+            width: 70%;
+
+            display: flex;
+            flex-direction: column;
+
+            .input-item {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                margin-bottom: 27px;
+
+                .input-name {
+                    font-family: $main-font;
+                    font-weight: $medium;
+                    font-size: $txt-size;
+                    line-height: 1.31;
+
+                    color: $black;
+
+                    margin-bottom: 12px;
+                }
+
+                #sum-input,
+                #term-input {
+                    padding: 13px 24px 16px;
+
+                    font-family: $main-font;
+                    font-weight: $medium;
+                    font-size: $calc-sum-size;
+                    line-height: 1.32;
+
+                    color: $black;
+
+                    border: 1px solid #E4ECEE;
+                    border-radius: 5px;
+
+                    margin-bottom: 12px;
+                }
+
+                .ui-slider {
+                    top: -13px;
+                    height: 2px;
+
+                    border: none;
+
+                    background: $main-color;
+                }
+
+                .ui-state-default {
+                    top: -10px;
+                    display: block;
+                    width: 23px;
+                    height: 23px;
+                    background: $white;
+                    background-clip: padding-box;
+
+                    border-radius: 50%;
+                    border: 8px solid $main-color;
+                    box-shadow: 0 0 12px $main-color, 0 0 12px $main-color;
+                    cursor: pointer;
+
+                    transform: translateX(-10px);
+                }
+
+                .ui-state-hover,
+                .ui-state-active {
+                    box-shadow: 0 0 18px $main-color, 0 0 18px $main-color;
+                }
+
+                .ui-state-focus,
+                .ui-state-active {
+                    outline: none;
+                }
+
+                .input-sums,
+                .input-terms {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        font-family: $main-font;
+                        font-weight: $light;
+                        font-size: $txt-size;
+                        line-height: 1.31;
+
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .form-submit {
+            width: 30%;
+            padding-top: 54px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: center;
+
+            .submit-wrapper {
+
+                .submit-info {
+                    padding-bottom: 33px;
+                    margin-bottom: 38px;
+                    border-bottom: 3px solid $black;
+
+                    .submit-txt {
+                        margin-bottom: 11px;
+
+                        p {
+                            font-family: $main-font;
+                            font-weight: $light;
+                            font-size: $txt-size;
+                            line-height: 1.31;
+
+                            color: $black;
+                        }
+                    }
+
+                    .submit-value {
+
+                        p {
+                            font-family: $main-font;
+                            font-weight: $medium;
+                            font-size: $calc-sum-size;
+                            line-height: 1.32;
+
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

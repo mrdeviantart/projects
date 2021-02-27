@@ -112,6 +112,7 @@
 
             &.active {
                 .location-number {
+                    font-weight: $medium;
                     background: $main-color;
                     box-shadow: 0 0 10px $main-color;
                 }
@@ -220,7 +221,7 @@
                 border-radius: 50%;
 
                 font-family: $main-font;
-                font-weight: $medium;
+                font-weight: $light;
                 font-size: $stage-txt-size;
                 line-height: 1.34;
 

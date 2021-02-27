@@ -71,7 +71,8 @@
      -webkit-appearance: none;
  }
 
- input[type='number']:focus {
+ input[type='number']:focus,
+ input[type='text']:focus {
      outline: none;
  }
 

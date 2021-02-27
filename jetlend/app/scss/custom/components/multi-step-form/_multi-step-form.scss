@@ -1,0 +1,15 @@
+// ==================================================================
+// ====================multi-step-form style=======================
+// ==================================================================
+
+.multi-step-form {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+
+@import "stages/stages";
+@import "form/form";
+

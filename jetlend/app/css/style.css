@@ -19,7 +19,7 @@ input[type='number'] { -moz-appearance: textfield; }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; }
 
-input[type='number']:focus { outline: none; }
+input[type='number']:focus, input[type='text']:focus { outline: none; }
 
 input[type='range']:focus { outline: none; }
 
@@ -368,6 +368,8 @@ input[type='range']:focus { outline: none; }
 
 @media (max-width: 425px) { .benefits-wrapper .benefits-content .benefits-item-wrapper .benefits-item-txt p { font-size: 13px; } }
 
+.multi-step-form { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; position: relative; }
+
 .stages { background: radial-gradient(70% 380% at 6% 10%, #0a2e37 36%, #000000 100%); padding: 82px 0 287px; position: relative; overflow: hidden; }
 
 @media (max-width: 600px) { .stages { padding-top: 50px; } }
@@ -398,7 +400,7 @@ input[type='range']:focus { outline: none; }
 
 @media (max-width: 768px) { .stages-wrapper .stages-location .location-item { -ms-flex-direction: row; flex-direction: row; width: auto; margin-bottom: 40px; text-align: left; } }
 
-.stages-wrapper .stages-location .location-item.active .location-number { background: #0ed193; box-shadow: 0 0 10px #0ed193; }
+.stages-wrapper .stages-location .location-item.active .location-number { font-weight: 500; background: #0ed193; box-shadow: 0 0 10px #0ed193; }
 
 .stages-wrapper .stages-location .location-item.active .location-txt p { font-weight: 500; }
 
@@ -420,7 +422,7 @@ input[type='range']:focus { outline: none; }
 
 @media (max-width: 768px) { .stages-wrapper .stages-location .location-item:nth-child(2):after { width: 3px; height: 50%; left: 18.5px; top: 40px; } }
 
-.stages-wrapper .stages-location .location-item .location-number { width: 40px; height: 40px; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; border: 1px solid #0ed193; border-radius: 50%; font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 15px; line-height: 1.34; color: #ffffff; margin-bottom: 18px; }
+.stages-wrapper .stages-location .location-item .location-number { width: 40px; height: 40px; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; border: 1px solid #0ed193; border-radius: 50%; font-family: "Red Ring", sans-serif; font-weight: 300; font-size: 15px; line-height: 1.34; color: #ffffff; margin-bottom: 18px; }
 
 @media (max-width: 768px) { .stages-wrapper .stages-location .location-item .location-number { margin: 0 20px 0 0; } }
 
@@ -436,58 +438,42 @@ input[type='range']:focus { outline: none; }
 
 @media (max-width: 370px) { .stages-wrapper .stages-location .location-item .location-txt p { font-size: 12px; } }
 
-.calc { padding: 50px 110px 81px 108px; }
+.form-container { position: absolute; bottom: -45%; left: 50%; -ms-transform: translateX(-50%); transform: translateX(-50%); }
 
-.calc-wrapper { margin-top: 27px; }
+.form-wrapper { padding: 50px 125px 54px 108px; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; background: #ffffff; }
 
-.calc-wrapper .calc-form { display: -ms-flexbox; display: flex; }
+.form-wrapper .form { display: -ms-flexbox; display: flex; margin-top: 27px; }
 
-.calc-wrapper .calc-form .form { width: 65%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; }
+.form-wrapper .form .form-input { width: 70%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; }
 
-.calc-wrapper .calc-form .form-item { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; margin-bottom: 27px; }
+.form-wrapper .form .form-input .input-item { width: 100%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; margin-bottom: 27px; }
 
-.calc-wrapper .calc-form .form-item .input { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; position: relative; }
+.form-wrapper .form .form-input .input-item .input-name { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 13px; line-height: 1.31; color: #000000; margin-bottom: 12px; }
 
-.calc-wrapper .calc-form .form-item .input .input-txt { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 25px; line-height: 1.32; color: #000000; }
+.form-wrapper .form .form-input .input-item #sum-input, .form-wrapper .form .form-input .input-item #term-input { padding: 13px 24px 16px; font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 25px; line-height: 1.32; color: #000000; border: 1px solid #E4ECEE; border-radius: 5px; margin-bottom: 12px; }
 
-.calc-wrapper .calc-form .form-item .input .sum-txt { position: absolute; top: 44%; left: 21%; }
+.form-wrapper .form .form-input .input-item .ui-slider { top: -13px; height: 2px; border: none; background: #0ed193; }
 
-.calc-wrapper .calc-form .form-item .input .term-txt { position: absolute; top: 44%; left: 8%; }
+.form-wrapper .form .form-input .input-item .ui-state-default { top: -10px; display: block; width: 23px; height: 23px; background: #ffffff; background-clip: padding-box; border-radius: 50%; border: 8px solid #0ed193; box-shadow: 0 0 12px #0ed193, 0 0 12px #0ed193; cursor: pointer; -ms-transform: translateX(-10px); transform: translateX(-10px); }
 
-.calc-wrapper .calc-form .form-item .input label { margin-bottom: 12px; }
+.form-wrapper .form .form-input .input-item .ui-state-hover, .form-wrapper .form .form-input .input-item .ui-state-active { box-shadow: 0 0 18px #0ed193, 0 0 18px #0ed193; }
 
-.calc-wrapper .calc-form .form-item .input #sum, .calc-wrapper .calc-form .form-item .input #term { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 25px; line-height: 1.32; color: #000000; border: 1px solid #E4ECEE; border-radius: 5px; padding: 14px 24px 17px 24px; }
+.form-wrapper .form .form-input .input-item .ui-state-focus, .form-wrapper .form .form-input .input-item .ui-state-active { outline: none; }
 
-.calc-wrapper .calc-form .form-item .input #sum::-webkit-input-placeholder, .calc-wrapper .calc-form .form-item .input #term::-webkit-input-placeholder { color: #000000; }
+.form-wrapper .form .form-input .input-item .input-sums, .form-wrapper .form .form-input .input-item .input-terms { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; }
 
-.calc-wrapper .calc-form .form-item .input #sum:-ms-input-placeholder, .calc-wrapper .calc-form .form-item .input #term:-ms-input-placeholder { color: #000000; }
+.form-wrapper .form .form-input .input-item .input-sums p, .form-wrapper .form .form-input .input-item .input-terms p { font-family: "Red Ring", sans-serif; font-weight: 300; font-size: 13px; line-height: 1.31; color: #000000; }
 
-.calc-wrapper .calc-form .form-item .input #sum::placeholder, .calc-wrapper .calc-form .form-item .input #term::placeholder { color: #000000; }
+.form-wrapper .form .form-submit { width: 30%; padding-top: 54px; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: end; align-items: flex-end; text-align: center; }
 
-.calc-wrapper .calc-form .form-item .range-slider { display: -ms-flexbox; display: flex; position: relative; }
+.form-wrapper .form .form-submit .submit-wrapper .submit-info { padding-bottom: 33px; margin-bottom: 38px; border-bottom: 3px solid #000000; }
 
-.calc-wrapper .calc-form .form-item .range-slider .bar { position: absolute; left: 0; top: -3px; z-index: 1; width: 100%; height: 2px; background: transparent; }
+.form-wrapper .form .form-submit .submit-wrapper .submit-info .submit-txt { margin-bottom: 11px; }
 
-.calc-wrapper .calc-form .form-item .range-slider .bar .fill { display: block; width: 0; height: 100%; background: #0ed193; }
+.form-wrapper .form .form-submit .submit-wrapper .submit-info .submit-txt p { font-family: "Red Ring", sans-serif; font-weight: 300; font-size: 13px; line-height: 1.31; color: #000000; }
 
-.calc-wrapper .calc-form .form-item .range-slider #sumSlider, .calc-wrapper .calc-form .form-item .range-slider #termSlider { position: relative; margin-bottom: 11px; -webkit-appearance: none; height: 2px; width: 100%; margin-top: -3px; }
+.form-wrapper .form .form-submit .submit-wrapper .submit-info .submit-value p { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 25px; line-height: 1.32; color: #000000; }
 
-.calc-wrapper .calc-form .form-item .range-slider #sumSlider::-webkit-slider-thumb, .calc-wrapper .calc-form .form-item .range-slider #termSlider::-webkit-slider-thumb { -webkit-appearance: none; position: relative; z-index: 2; width: 23px; height: 23px; background-color: #ffffff; border-radius: 50%; border: 8px solid #0ed193; box-shadow: 0 0 12px #0ed193, 0 0 12px rgba(14, 209, 147, 0.5), 0 0 12px rgba(14, 209, 147, 0.5); cursor: pointer; }
-
-.calc-wrapper .calc-form .form-item .range-slider #sumSlider::-webkit-slider-thumb:hover, .calc-wrapper .calc-form .form-item .range-slider #termSlider::-webkit-slider-thumb:hover { box-shadow: 0 0 24px #0ed193, 0 0 24px rgba(14, 209, 147, 0.5), 0 0 24px rgba(14, 209, 147, 0.5); }
-
-.calc-wrapper .calc-form .form-item .range-txt { display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; }
-
-.calc-wrapper .calc-form .form-item .range-txt p { font-weight: 300; line-height: 1.31; }
-
-.calc-wrapper .calc-form .calc-info { width: 35%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; padding-bottom: 10px; }
-
-.calc-wrapper .calc-form .calc-info .payment-info { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; text-align: center; padding-bottom: 33px; margin-bottom: 38px; border-bottom: 3px solid #000000; }
-
-.calc-wrapper .calc-form .calc-info .payment-info .payment-txt { margin-bottom: 11px; }
-
-.calc-wrapper .calc-form .calc-info .payment-info .payment-txt p { font-family: "Red Ring", sans-serif; font-weight: 300; font-size: 13px; line-height: 1.31; color: #000000; }
-
-.calc-wrapper .calc-form .calc-info .payment-info .payment-count p { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 25px; line-height: 1.32; color: #000000; }
+.partners { background: #E5E5E5; padding: 396px 0 72px; }
 
 /*# sourceMappingURL=style.css.map */
