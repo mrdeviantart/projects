@@ -4,25 +4,70 @@
 
 .partners {
     background: $partners-bg-color;
-    padding: 314px 0 72px;
+    padding: 314px 0 56px;
 
     @media (max-width: 1024px) {
-        padding-top: 360px;
+        padding-top: 400px;
     }
 
     @media (max-width: 768px) {
-        padding-top: 270px;
-    }
-
-    @media (max-width: 600px) {
-        padding-top: 225px;
-    }
-
-    @media (max-width: 450px) {
         padding-top: 290px;
     }
 
+    @media (max-width: 600px) {
+        padding-top: 250px;
+    }
+
+    @media (max-width: 450px) {
+        padding-top: 320px;
+    }
+
     @media (max-width: 385px) {
-        padding-top: 280px;
+        padding-top: 300px;
+    }
+}
+
+.partners-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 35px -8px 0;
+
+    .partners-logo {
+        transition: .3s;
+        margin: 0 8px 16px 8px;
+
+        box-shadow: 8px 8px 4px rgba($black, .2);
+
+        &:hover {
+
+            a {
+                background: $main-color;
+                transition: .3s;
+
+                .img-svg {
+
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+
+        a {
+            width: 169px;
+            height: 121px;
+            background: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .img-svg {
+
+                path {
+                    fill: #ACBBBE;
+                }
+            }
+        }
     }
 }

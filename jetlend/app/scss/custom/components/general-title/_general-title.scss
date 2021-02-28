@@ -36,4 +36,15 @@
             color: $white;
         }
     }
+
+    &--green {
+
+        h2 {
+
+            span {
+                color: $main-color;
+                border-bottom: 2px dashed $main-color;
+            }
+        }
+    }
 }

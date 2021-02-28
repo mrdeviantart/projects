@@ -57,6 +57,8 @@ button[type=submit]:focus { outline: none; }
 
 .general-title--white h2 { color: #ffffff; }
 
+.general-title--green h2 span { color: #0ed193; border-bottom: 2px dashed #0ed193; }
+
 .header--fixed { position: fixed; top: 0; left: 50%; z-index: 1000; -ms-transform: translateX(-50%); transform: translateX(-50%); width: 100vw; background: #ffffff; box-shadow: 0 0 20px black; animation-name: showHeader; animation-duration: .8s; }
 
 @keyframes showHeader { 0% { opacity: 0;
@@ -510,16 +512,28 @@ button[type=submit]:focus { outline: none; }
 
 @media (max-width: 450px) { .form-wrapper .form .form-submit .submit-wrapper .submit-info .submit-value p { font-size: 20px; } }
 
-.partners { background: #E5E5E5; padding: 314px 0 72px; }
+.partners { background: #E5E5E5; padding: 314px 0 56px; }
 
-@media (max-width: 1024px) { .partners { padding-top: 360px; } }
+@media (max-width: 1024px) { .partners { padding-top: 400px; } }
 
-@media (max-width: 768px) { .partners { padding-top: 270px; } }
+@media (max-width: 768px) { .partners { padding-top: 290px; } }
 
-@media (max-width: 600px) { .partners { padding-top: 225px; } }
+@media (max-width: 600px) { .partners { padding-top: 250px; } }
 
-@media (max-width: 450px) { .partners { padding-top: 290px; } }
+@media (max-width: 450px) { .partners { padding-top: 320px; } }
 
-@media (max-width: 385px) { .partners { padding-top: 280px; } }
+@media (max-width: 385px) { .partners { padding-top: 300px; } }
+
+.partners-wrapper { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-pack: center; justify-content: center; margin: 35px -8px 0; }
+
+.partners-wrapper .partners-logo { transition: .3s; margin: 0 8px 16px 8px; box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); }
+
+.partners-wrapper .partners-logo:hover a { background: #0ed193; transition: .3s; }
+
+.partners-wrapper .partners-logo:hover a .img-svg path { fill: #ffffff; }
+
+.partners-wrapper .partners-logo a { width: 169px; height: 121px; background: #ffffff; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
+
+.partners-wrapper .partners-logo a .img-svg path { fill: #ACBBBE; }
 
 /*# sourceMappingURL=style.css.map */
