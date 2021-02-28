@@ -4,5 +4,25 @@
 
 .partners {
     background: $partners-bg-color;
-    padding: 396px 0 72px;
+    padding: 314px 0 72px;
+
+    @media (max-width: 1024px) {
+        padding-top: 360px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 270px;
+    }
+
+    @media (max-width: 600px) {
+        padding-top: 225px;
+    }
+
+    @media (max-width: 450px) {
+        padding-top: 290px;
+    }
+
+    @media (max-width: 385px) {
+        padding-top: 280px;
+    }
 }

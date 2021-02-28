@@ -14,6 +14,7 @@
     line-height: 1.35;
     text-align: center;
     color: $white;
+    align-self: center;
 
     p {
         font-family: $main-font;
@@ -42,4 +43,8 @@
     &:hover {
         background: #09c58a;
     }
+}
+
+button[type=submit]:focus {
+    outline: none;
 }

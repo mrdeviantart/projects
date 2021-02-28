@@ -9,4 +9,4 @@ include("js/header/burger.js"); // include burger menu
 
 include("js/header/header-fixed.js"); // include header-fixed
 
-include("js/form/form.js"); // include header-fixed
+include("js/form/form.js"); // include form
