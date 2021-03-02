@@ -5,11 +5,22 @@
 //initializing sum slider
 
 const sumInput = $("#sum-input");
+// const sumInputMaxValue = sumInput.attr("max");
+// const sumInputMinValue = sumInput.attr("min");
 
 function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     // getting spaces between a number, f.e. 1 500 000 = 1500000
 }
+
+// function putRandomInputValue () {
+//     let randomInputValue = Math.round((Math.random().toFixed(2))*sumInputMaxValue);
+//     if (randomInputValue < sumInputMinValue) {
+//         sumInput.val(numberWithSpaces(sumInputMinValue) + (" ₽"));
+//     }  else {
+//         sumInput.val(numberWithSpaces(randomInputValue) + (" ₽"))
+//     }
+// }
 
 const sumSlider = $("<div id='sum-slider'></div>").insertAfter(sumInput).slider({
     range: "max",
@@ -27,6 +38,7 @@ const sumSlider = $("<div id='sum-slider'></div>").insertAfter(sumInput).slider(
 
 //putting default value
 sumInput.val(numberWithSpaces(sumSlider.slider("value")) + (" ₽"));
+// setInterval(putRandomInputValue, 5000);
 
 //-----------------------------------------------------------------------
 

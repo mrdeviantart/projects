@@ -1,4 +1,4 @@
-*, *:before, *:after { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
 
@@ -6,6 +6,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
 body { background: #ffffff; font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 13px; line-height: 1; color: #000000; }
+
+body::-webkit-scrollbar { width: 10px; }
+
+body::-webkit-scrollbar-track { background: #ffffff; border-radius: 5px; }
+
+body::-webkit-scrollbar-thumb { background: #0ed193; border: 1px solid #ffffff; border-radius: 5px; }
 
 a { text-decoration: none; color: #000000; outline: none; }
 
@@ -538,18 +544,42 @@ button[type=submit]:focus { outline: none; }
 
 .about-us { display: -ms-flexbox; display: flex; min-height: 420px; background: radial-gradient(70% 380% at 6% 10%, #0a2e37 36%, #000000 100%); }
 
-.about-us-video { width: 50%; display: block; margin: auto 0; }
+.about-us-video { width: 50%; position: relative; display: block; margin: auto 0; }
 
-.about-us-video .video-wrapper { position: relative; overflow: hidden; }
+.about-us-video .video-wrapper { position: relative; z-index: 1; }
 
 .about-us-video .video-wrapper:before { content: ""; display: block; padding-top: 56.25%; }
 
-.about-us-video .video-wrapper iframe, .about-us-video .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.about-us-video .video-wrapper iframe, .about-us-video .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+
+.about-us-video .video-wrapper video { -o-object-fit: cover; object-fit: cover; outline: none; }
+
+.about-us-video .video-wrapper .big-play-button { position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 5; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; width: 100%; height: 100%; padding: 0; background: none; border: none; outline: none; cursor: pointer; opacity: 1; }
+
+.about-us-video .video-wrapper .big-play-button svg { display: block; width: 60px; height: 60px; fill: #ffffff; }
+
+.about-us-video .video-wrapper .big-play-button.active + .video-controls { -ms-transform: translateY(calc(100% - 6px)); transform: translateY(calc(100% - 6px)); transition: .3s; }
+
+.about-us-video .video-wrapper .video-controls { width: 100%; position: absolute; bottom: 0; background: rgba(0, 0, 0, 0.4); -ms-transform: translateY(100%); transform: translateY(100%); transition: .3s; }
+
+.about-us-video .video-wrapper .video-controls .progress-bar { width: 100%; height: 6px; top: 0; left: 0; background: rgba(0, 0, 0, 0.3); }
+
+.about-us-video .video-wrapper .video-controls .progress-bar div { height: 100%; width: 0; background: #0ed193; border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+
+.about-us-video .video-wrapper .video-controls .video-buttons { padding: 10px; }
+
+.about-us-video .video-wrapper .video-controls .video-buttons #play-pause { display: block; width: 30px; height: 30px; padding: 0; background: none; border: none; outline: none; cursor: pointer; }
+
+.about-us-video .video-wrapper .video-controls .video-buttons #play-pause svg { display: block; width: 100%; height: 100%; fill: #ffffff; }
 
 .about-us-info { width: 50%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; background: #0ed193; padding: 20px 173px 20px 120px; }
 
 .about-us-info h3 { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 35px; line-height: 1.35; color: #ffffff; margin-bottom: 15px; }
 
+@media (min-width: 1920px) { .about-us-info h3 { font-size: 40px; } }
+
 .about-us-info p { font-family: "Red Ring", sans-serif; font-weight: 400; font-size: 13px; line-height: 1.31; color: #ffffff; margin-bottom: 15px; }
+
+@media (min-width: 1920px) { .about-us-info p { font-size: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
