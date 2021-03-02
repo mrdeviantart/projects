@@ -1,0 +1,69 @@
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .video-container {
+        width: 800px;
+        height: 500px;
+
+        background: #ccc;
+
+        border-radius: 15px;
+        border: 1px solid $black;
+
+        padding: 15px;
+
+        position: relative;
+
+        .hidden {
+            display: none;
+        }
+
+        #video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .video-controls {
+            padding: 10px;
+            margin: 0 15px 15px;
+
+            display: flex;
+            width: calc(100% - 30px);
+            background: rgba($black, .3);
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            #play {
+                display: block;
+                width: 35px;
+                height: 35px;
+
+                svg {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
