@@ -17,3 +17,5 @@ include("js/about-us/about-us.js"); // video player
 
 // include("js/video/video.js"); // test video
 
+include("js/sign-form/sign-form.js"); // sign form
+

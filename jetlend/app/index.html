@@ -9,286 +9,172 @@
     <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.css">
     <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.structure.css">
     <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.theme.css">
-    <title>Document</title>
+    <title>jetLend</title>
 </head>
 <body>
 
-<!-----------------------------------Video Buttons---------------------------------------->
+<div class="page">
 
-<svg style="display: none">
+    <!-----------------------------------Video Buttons---------------------------------------->
 
-    <symbol id="play" viewBox="0 0 512 512">
-        <g>
-            <path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969
-			l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160
-			c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969
-			S360.813,263.01,357.771,264.969z"/>
-        </g>
-    </symbol>
+    <svg style="display: none">
 
-    <symbol id="pause"  viewBox="0 0 426.667 426.667">
-        <g>
-            <path d="M213.333,0C95.467,0,0,95.467,0,213.333s95.467,213.333,213.333,213.333S426.667,331.2,426.667,213.333S331.2,0,213.333,0
-			z M192,298.667h-42.667V128H192V298.667z M277.333,298.667h-42.667V128h42.667V298.667z"/>
-        </g>
-    </symbol>
+        <symbol id="play" viewBox="0 0 512 512">
+            <g>
+                <path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969
+                l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160
+                c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969
+                S360.813,263.01,357.771,264.969z"/>
+            </g>
+        </symbol>
 
-    <symbol id="volume" viewBox="0 0 93.038 93.038">
-        <g>
-            <path d="M46.547,75.521c0,1.639-0.947,3.128-2.429,3.823c-0.573,0.271-1.187,0.402-1.797,0.402c-0.966,0-1.923-0.332-2.696-0.973
-		l-23.098-19.14H4.225C1.892,59.635,0,57.742,0,55.409V38.576c0-2.334,1.892-4.226,4.225-4.226h12.303l23.098-19.14
-		c1.262-1.046,3.012-1.269,4.493-0.569c1.481,0.695,2.429,2.185,2.429,3.823L46.547,75.521L46.547,75.521z M62.784,68.919
-		c-0.103,0.007-0.202,0.011-0.304,0.011c-1.116,0-2.192-0.441-2.987-1.237l-0.565-0.567c-1.482-1.479-1.656-3.822-0.408-5.504
-		c3.164-4.266,4.834-9.323,4.834-14.628c0-5.706-1.896-11.058-5.484-15.478c-1.366-1.68-1.24-4.12,0.291-5.65l0.564-0.565
-		c0.844-0.844,1.975-1.304,3.199-1.231c1.192,0.06,2.305,0.621,3.061,1.545c4.977,6.09,7.606,13.484,7.606,21.38
-		c0,7.354-2.325,14.354-6.725,20.24C65.131,68.216,64.007,68.832,62.784,68.919z M80.252,81.976
-		c-0.764,0.903-1.869,1.445-3.052,1.495c-0.058,0.002-0.117,0.004-0.177,0.004c-1.119,0-2.193-0.442-2.988-1.237l-0.555-0.555
-		c-1.551-1.55-1.656-4.029-0.246-5.707c6.814-8.104,10.568-18.396,10.568-28.982c0-11.011-4.019-21.611-11.314-29.847
-		c-1.479-1.672-1.404-4.203,0.17-5.783l0.554-0.555c0.822-0.826,1.89-1.281,3.115-1.242c1.163,0.033,2.263,0.547,3.036,1.417
-		c8.818,9.928,13.675,22.718,13.675,36.01C93.04,59.783,88.499,72.207,80.252,81.976z"/>
-        </g>
-    </symbol>
+        <symbol id="pause"  viewBox="0 0 426.667 426.667">
+            <g>
+                <path d="M213.333,0C95.467,0,0,95.467,0,213.333s95.467,213.333,213.333,213.333S426.667,331.2,426.667,213.333S331.2,0,213.333,0
+                z M192,298.667h-42.667V128H192V298.667z M277.333,298.667h-42.667V128h42.667V298.667z"/>
+            </g>
+        </symbol>
 
-    <symbol id="mute"  viewBox="0 0 124.625 124.625">
-        <g>
-            <path d="M6,92.404h23.1l25.6,19.3c4,3,9.601,0.2,9.601-4.8v-89.2c0-4.9-5.701-7.8-9.601-4.8l-25.6,19.3H6c-3.3,0-6,2.7-6,6v48.301
-		C0,89.704,2.7,92.404,6,92.404z"/>
-            <path d="M122.4,40.604c-2.7-2.7-7.2-2.7-9.9,0l-11.8,11.8l-11.8-11.8c-2.7-2.7-7.2-2.7-9.9,0c-2.699,2.7-2.699,7.2,0,9.9
-		l11.801,11.8L79,74.104c-2.699,2.7-2.699,7.2,0,9.9c1.4,1.399,3.2,2.1,5,2.1c1.801,0,3.6-0.7,5-2.1l11.801-11.801L112.6,84.004
-		c1.4,1.399,3.201,2.1,5,2.1c1.801,0,3.601-0.7,5-2.1c2.701-2.7,2.701-7.2,0-9.9l-12-11.8l11.801-11.8
-		C125.1,47.804,125.1,43.304,122.4,40.604z"/>
-        </g>
-    </symbol>
+        <symbol id="volume" viewBox="0 0 93.038 93.038">
+            <g>
+                <path d="M46.547,75.521c0,1.639-0.947,3.128-2.429,3.823c-0.573,0.271-1.187,0.402-1.797,0.402c-0.966,0-1.923-0.332-2.696-0.973
+            l-23.098-19.14H4.225C1.892,59.635,0,57.742,0,55.409V38.576c0-2.334,1.892-4.226,4.225-4.226h12.303l23.098-19.14
+            c1.262-1.046,3.012-1.269,4.493-0.569c1.481,0.695,2.429,2.185,2.429,3.823L46.547,75.521L46.547,75.521z M62.784,68.919
+            c-0.103,0.007-0.202,0.011-0.304,0.011c-1.116,0-2.192-0.441-2.987-1.237l-0.565-0.567c-1.482-1.479-1.656-3.822-0.408-5.504
+            c3.164-4.266,4.834-9.323,4.834-14.628c0-5.706-1.896-11.058-5.484-15.478c-1.366-1.68-1.24-4.12,0.291-5.65l0.564-0.565
+            c0.844-0.844,1.975-1.304,3.199-1.231c1.192,0.06,2.305,0.621,3.061,1.545c4.977,6.09,7.606,13.484,7.606,21.38
+            c0,7.354-2.325,14.354-6.725,20.24C65.131,68.216,64.007,68.832,62.784,68.919z M80.252,81.976
+            c-0.764,0.903-1.869,1.445-3.052,1.495c-0.058,0.002-0.117,0.004-0.177,0.004c-1.119,0-2.193-0.442-2.988-1.237l-0.555-0.555
+            c-1.551-1.55-1.656-4.029-0.246-5.707c6.814-8.104,10.568-18.396,10.568-28.982c0-11.011-4.019-21.611-11.314-29.847
+            c-1.479-1.672-1.404-4.203,0.17-5.783l0.554-0.555c0.822-0.826,1.89-1.281,3.115-1.242c1.163,0.033,2.263,0.547,3.036,1.417
+            c8.818,9.928,13.675,22.718,13.675,36.01C93.04,59.783,88.499,72.207,80.252,81.976z"/>
+            </g>
+        </symbol>
 
-</svg>
+        <symbol id="mute"  viewBox="0 0 124.625 124.625">
+            <g>
+                <path d="M6,92.404h23.1l25.6,19.3c4,3,9.601,0.2,9.601-4.8v-89.2c0-4.9-5.701-7.8-9.601-4.8l-25.6,19.3H6c-3.3,0-6,2.7-6,6v48.301
+            C0,89.704,2.7,92.404,6,92.404z"/>
+                <path d="M122.4,40.604c-2.7-2.7-7.2-2.7-9.9,0l-11.8,11.8l-11.8-11.8c-2.7-2.7-7.2-2.7-9.9,0c-2.699,2.7-2.699,7.2,0,9.9
+            l11.801,11.8L79,74.104c-2.699,2.7-2.699,7.2,0,9.9c1.4,1.399,3.2,2.1,5,2.1c1.801,0,3.6-0.7,5-2.1l11.801-11.801L112.6,84.004
+            c1.4,1.399,3.201,2.1,5,2.1c1.801,0,3.601-0.7,5-2.1c2.701-2.7,2.701-7.2,0-9.9l-12-11.8l11.801-11.8
+            C125.1,47.804,125.1,43.304,122.4,40.604z"/>
+            </g>
+        </symbol>
 
-<!--------------------------------------Header-------------------------------------------->
+    </svg>
 
-<header class="header">
-    <div class="container">
-        <div class="header-wrapper">
-            <a class="logo" href="index.html">
-                <img src="img/header/logo.png" alt="jetlend logo">
-            </a>
+    <!--------------------------------------Header-------------------------------------------->
 
-            <div class="menu">
-                <nav class="nav">
-                    <ul>
-                        <li>
-                            <a class="nav-link" href="#">инвесторам</a>
-                            <a class="nav-link" href="#">предпринимателям</a>
-                            <a class="nav-link" href="#">о платформе</a>
-                            <a class="nav-link" href="#">новости</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <a href="#" class="btn">
-                    <p class="btn-txt">Войти</p>
-                    <img src="img/button/enter.png" alt="enter">
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <a class="logo" href="index.html">
+                    <img src="img/header/logo.png" alt="jetlend logo">
                 </a>
-            </div>
 
-            <a href="#" class="burger-btn">
-                <span></span>
-            </a>
+                <div class="menu">
+                    <nav class="nav">
+                        <ul>
+                            <li>
+                                <a class="nav-link" href="#">инвесторам</a>
+                                <a class="nav-link" href="#">предпринимателям</a>
+                                <a class="nav-link" href="#">о платформе</a>
+                                <a class="nav-link" href="#">новости</a>
+                            </li>
+                        </ul>
+                    </nav>
 
-            <div class="burger-menu">
-                <nav class="burger-nav">
-                    <ul>
-                        <li>
-                            <a class="burger-link button" href="#">
-                                <p class="btn-txt">Войти</p>
-                                <img src="img/button/enter.png" alt="enter">
-                            </a>
-                            <a class="burger-link" href="#">инвесторам</a>
-                            <a class="burger-link" href="#">предпринимателям</a>
-                            <a class="burger-link" href="#">о платформе</a>
-                            <a class="burger-link" href="#">новости</a>
-                        </li>
-                    </ul>
-                </nav>
+                    <a href="signin.html" class="btn">
+                        <p class="btn-txt">Войти</p>
+                        <img src="img/button/enter.png" alt="enter">
+                    </a>
+                </div>
+
+                <a href="#" class="burger-btn">
+                    <span></span>
+                </a>
+
+                <div class="burger-menu">
+                    <nav class="burger-nav">
+                        <ul>
+                            <li>
+                                <a class="burger-link button" href="signin.html">
+                                    <p class="btn-txt">Войти</p>
+                                    <img src="img/button/enter.png" alt="enter">
+                                </a>
+                                <a class="burger-link" href="#">инвесторам</a>
+                                <a class="burger-link" href="#">предпринимателям</a>
+                                <a class="burger-link" href="#">о платформе</a>
+                                <a class="burger-link" href="#">новости</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!--------------------------------------Main---------------------------------------------->
+    <!--------------------------------------Main---------------------------------------------->
 
-<main class="main">
+    <main class="main">
 
-    <!-----------------------------------Intro---------------------------------------------->
+        <!----------------------------------Intro-------------------------------------------->
 
-    <div class="intro">
+        <div class="intro">
 
-        <div class="intro-top-circles">
-            <div>
+            <div class="intro-top-circles">
                 <div>
-                    <div></div>
+                    <div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-
-            <div class="intro-wrapper">
-
-                <div class="intro-logos">
-                    <img src="img/intro/bank.png" alt="bank">
-                    <img src="img/intro/sk.png" alt="sk partner">
-                </div>
-
-                <nav class="intro-nav">
-                    <div class="intro-nav-link">
-                        <a class="intro-nav-btn active" href="#">Обзор</a>
-                    </div>
-                    <div class="intro-nav-link">
-                        <a class="intro-nav-btn" href="#">Условия</a>
-                    </div>
-                    <div class="intro-nav-link">
-                        <a class="intro-nav-btn" href="#">Вопросы</a>
-                    </div>
-                </nav>
-                
-                <div class="intro-info">
-                    <h1 class="intro-title">Кредит на пополнение оборотных средств</h1>
-                    
-                    <div class="intro-txt">
-                        <p>Сумма до 5 000 000 ₽</p>
-                        <p>Ставка от 11% годовых</p>
-                        <p>Срок до 12 месяцев</p>
-                    </div>
-                </div>
-
-                <div class="intro-btn">
-                    <a href="#" class="btn btn--big">Получить кредит</a>
-                </div>
-
-                <div class="intro-img">
-                    <img src="img/intro/man.png" alt="the BOSS">
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="intro-bottom-circles">
-            <div>
-                <div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-----------------------------------Benefits----------------------------------------->
-
-    <div class="benefits">
-
-        <div class="container">
-
-            <div class="benefits-wrapper">
-
-                <div class="general-title">
-                    <h2>Преимущества оборотного кредита в JetLend</h2>
-                </div>
-
-                <div class="benefits-content">
-
-                    <div class="benefits-item">
-
-                        <div class="benefits-item-wrapper">
-
-                            <div class="benefits-item-title">
-                                <h3>Решение за 10 секунд</h3>
-                            </div>
-                            <div class="benefits-item-txt">
-                                <p>Просто загрузите два документы и мы оценим ваш бизнес почти моментально</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="benefits-item">
-
-                        <div class="benefits-item-wrapper">
-
-                            <div class="benefits-item-title">
-                                <h3>Всё онлайн</h3>
-                            </div>
-                            <div class="benefits-item-txt">
-                                <p>Без поездок в офис - оформите кредит в личном кабинете</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="benefits-item">
-
-                        <div class="benefits-item-wrapper">
-
-                            <div class="benefits-item-title">
-                                <h3>Без залога</h3>
-                            </div>
-                            <div class="benefits-item-txt">
-                                <p>Одобряем кредит для бизнеса на основании оборотов по расчетным счетам</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!--------------------------------multi-step-form------------------------------------->
-
-    <div class="multi-step-form">
-
-        <!---------------------------------Stages---------------------------------------->
-
-        <div class="stages">
 
             <div class="container">
 
-                <div class="general-title general-title--white">
-                    <h2>Как получить оборотный кредит</h2>
-                </div>
+                <div class="intro-wrapper">
 
-                <div class="stages-wrapper">
+                    <div class="intro-logos">
+                        <img src="img/intro/bank.png" alt="bank">
+                        <img src="img/intro/sk.png" alt="sk partner">
+                    </div>
 
-                    <div class="stages-location">
-
-                        <div class="location-item active">
-                            <div class="location-number">1</div>
-                            <div class="location-txt"><p>Пройдите регистрацию</p></div>
+                    <nav class="intro-nav">
+                        <div class="intro-nav-link">
+                            <a class="intro-nav-btn active" href="#">Обзор</a>
                         </div>
-
-                        <div class="location-item">
-                            <div class="location-number">2</div>
-                            <div class="location-txt"><p>Получите предварительное решение</p></div>
+                        <div class="intro-nav-link">
+                            <a class="intro-nav-btn" href="#">Условия</a>
                         </div>
-
-                        <div class="location-item">
-                            <div class="location-number">3</div>
-                            <div class="location-txt"><p>Пройдите верификацию и получите деньги</p></div>
+                        <div class="intro-nav-link">
+                            <a class="intro-nav-btn" href="#">Вопросы</a>
                         </div>
+                    </nav>
 
+                    <div class="intro-info">
+                        <h1 class="intro-title">Кредит на пополнение оборотных средств</h1>
+
+                        <div class="intro-txt">
+                            <p>Сумма до 5 000 000 ₽</p>
+                            <p>Ставка от 11% годовых</p>
+                            <p>Срок до 12 месяцев</p>
+                        </div>
+                    </div>
+
+                    <div class="intro-btn">
+                        <a href="#multi-step-form" class="btn btn--big">Получить кредит</a>
+                    </div>
+
+                    <div class="intro-img">
+                        <img src="img/intro/man.png" alt="the BOSS">
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="stages-circles">
+            <div class="intro-bottom-circles">
                 <div>
                     <div>
                         <div></div>
@@ -298,299 +184,417 @@
 
         </div>
 
-        <!---------------------------------Form---------------------------------------->
+        <!-----------------------------------Benefits----------------------------------------->
 
-        <div class="container form-container">
+        <div class="benefits">
 
-            <div class="form-wrapper">
+            <div class="container">
 
-                <div class="general-title">
-                    <h2>Калькулятор заемщика</h2>
+                <div class="benefits-wrapper">
+
+                    <div class="general-title">
+                        <h2>Преимущества оборотного кредита в JetLend</h2>
+                    </div>
+
+                    <div class="benefits-content">
+
+                        <div class="benefits-item">
+
+                            <div class="benefits-item-wrapper">
+
+                                <div class="benefits-item-title">
+                                    <h3>Решение за 10 секунд</h3>
+                                </div>
+                                <div class="benefits-item-txt">
+                                    <p>Просто загрузите два документы и мы оценим ваш бизнес почти моментально</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="benefits-item">
+
+                            <div class="benefits-item-wrapper">
+
+                                <div class="benefits-item-title">
+                                    <h3>Всё онлайн</h3>
+                                </div>
+                                <div class="benefits-item-txt">
+                                    <p>Без поездок в офис - оформите кредит в личном кабинете</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="benefits-item">
+
+                            <div class="benefits-item-wrapper">
+
+                                <div class="benefits-item-title">
+                                    <h3>Без залога</h3>
+                                </div>
+                                <div class="benefits-item-txt">
+                                    <p>Одобряем кредит для бизнеса на основании оборотов по расчетным счетам</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-
-                <form action="/" class="form">
-
-                    <div class="form-input">
-
-                        <div class="input-item">
-
-                            <label for="sum-input" class="input-name">Желаемая сумма кредита</label>
-                            <input type="text" id="sum-input" min="500000" max="10000000" value="1000000">
-                            <div class="input-sums">
-                                <p class="min-sum">500 000 руб.</p>
-                                <p class="max-sum">10 000 000 руб.</p>
-                            </div>
-                            
-                        </div>
-
-                        <div class="input-item">
-
-                            <label for="term-input" class="input-name">Срок кредита</label>
-                            <input type="text" id="term-input" min="1" max="12" value="5">
-                            <div class="input-terms">
-                                <p class="min-term">1 месяц</p>
-                                <p class="max-term">12 месяцев</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="form-submit">
-
-                        <div class="submit-wrapper">
-
-                            <div class="submit-info">
-
-                                <div class="submit-txt">
-                                    <p>Ежемесячный платеж</p>
-                                </div>
-
-                                <div class="submit-value">
-                                    <p>200 000 ₽</p>
-                                </div>
-
-                            </div>
-
-                            <button class="btn submit-btn" type="submit">Получить кредит</button>
-
-                        </div>
-
-                    </div>
-
-                </form>
 
             </div>
 
         </div>
 
-    </div>
+        <!--------------------------------multi-step-form------------------------------------->
 
-    <!-------------------------------------partners---------------------------------------->
+        <div id="multi-step-form" class="multi-step-form">
 
-    <div class="partners">
+            <!---------------------------------Stages---------------------------------------->
+
+            <div class="stages">
+
+                <div class="container">
+
+                    <div class="general-title general-title--white">
+                        <h2>Как получить оборотный кредит</h2>
+                    </div>
+
+                    <div class="stages-wrapper">
+
+                        <div class="stages-location">
+
+                            <div class="location-item active">
+                                <div class="location-number">1</div>
+                                <div class="location-txt"><p>Пройдите регистрацию</p></div>
+                            </div>
+
+                            <div class="location-item">
+                                <div class="location-number">2</div>
+                                <div class="location-txt"><p>Получите предварительное решение</p></div>
+                            </div>
+
+                            <div class="location-item">
+                                <div class="location-number">3</div>
+                                <div class="location-txt"><p>Пройдите верификацию и получите деньги</p></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="stages-circles">
+                    <div>
+                        <div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!---------------------------------Form---------------------------------------->
+
+            <div class="container form-container">
+
+                <div class="form-wrapper">
+
+                    <div class="general-title">
+                        <h2>Калькулятор заемщика</h2>
+                    </div>
+
+                    <form action="/" class="form">
+
+                        <div class="form-input">
+
+                            <div class="input-item">
+
+                                <label for="sum-input" class="input-name">Желаемая сумма кредита</label>
+                                <input type="text" id="sum-input" min="500000" max="10000000" value="1000000">
+                                <div class="input-sums">
+                                    <p class="min-sum">500 000 руб.</p>
+                                    <p class="max-sum">10 000 000 руб.</p>
+                                </div>
+
+                            </div>
+
+                            <div class="input-item">
+
+                                <label for="term-input" class="input-name">Срок кредита</label>
+                                <input type="text" id="term-input" min="1" max="12" value="5">
+                                <div class="input-terms">
+                                    <p class="min-term">1 месяц</p>
+                                    <p class="max-term">12 месяцев</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-submit">
+
+                            <div class="submit-wrapper">
+
+                                <div class="submit-info">
+
+                                    <div class="submit-txt">
+                                        <p>Ежемесячный платеж</p>
+                                    </div>
+
+                                    <div class="submit-value">
+                                        <p>200 000 ₽</p>
+                                    </div>
+
+                                </div>
+
+                                <button class="btn submit-btn" type="submit">Получить кредит</button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-------------------------------------partners---------------------------------------->
+
+        <div class="partners">
+
+            <div class="container">
+
+                <div class="general-title general-title--green">
+                    <h2>СМИ о нас <span>Наши партнеры</span></h2>
+                </div>
+
+                <div class="partners-wrapper">
+
+                    <div class="partners-logo">
+                        <a href="#">
+                            <img class="img-svg" src="img/partners/1.svg" alt="Forbes">
+                        </a>
+                    </div>
+
+                    <div class="partners-logo">
+                        <a href="#">
+                            <img class="img-svg" src="img/partners/2.svg" alt="Коммерсанть">
+                        </a>
+                    </div>
+
+                    <div class="partners-logo">
+                        <a href="#">
+                            <img class="img-svg" src="img/partners/3.svg" alt="РБК">
+                        </a>
+                    </div>
+
+                    <div class="partners-logo">
+                        <a href="#">
+                            <img class="img-svg" src="img/partners/4.svg" alt="ВЕДОМОСТИ">
+                        </a>
+                    </div>
+
+                    <div class="partners-logo">
+                        <a href="#">
+                            <img class="img-svg" src="img/partners/5.svg" alt="vc.ru">
+                        </a>
+                    </div>
+
+                    <div class="partners-logo">
+                        <a href="#">
+                            <img class="img-svg" src="img/partners/6.svg" alt="Republic">
+                        </a>
+                    </div>
+
+                    <div class="partners-logo">
+                        <a href="#">
+                            <img class="img-svg" src="img/partners/7.svg" alt="banki.ru">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-------------------------------------info---------------------------------------->
+
+        <div class="about-us">
+
+            <div class="about-us-video">
+                <div class="video-wrapper">
+    <!--                <iframe src="https://www.youtube.com/embed/v1qhlHIXvZs?autoplay=0&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                    <video id="video" src="img/about-us/preview.mp4" poster="img/about-us/preview.jpg"></video>
+                    <button class="big-play-button">
+                        <svg>
+                            <use xlink:href="#play"></use>
+                        </svg>
+                    </button>
+                    <div class="video-controls">
+                        <div class="progress-bar">
+                            <div class="progress-bar-actual"></div>
+                        </div>
+                        <div class="video-buttons">
+                            <button id="play-pause">
+                                <svg>
+                                    <use xlink:href="#play"></use>
+                                </svg>
+                            </button>
+                            <div class="volume">
+                                <button id="volume-mute">
+                                    <svg>
+                                        <use xlink:href="#volume"></use>
+                                    </svg>
+                                </button>
+                                <div class="volume-progress-bar">
+                                    <div class="volume-progress-bar-actual"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-us-info">
+
+                <h3>Jetlend — надежный партнер</h3>
+                <p>Спонсорство искажает бренд. Диктат потребителя, как принято считать, обычно правомочен. Стоит отметить, что управление брендом исключительно экономит потребительский conversion rate, отвоевывая свою долю рынка. Повышение жизненных стандартов притягивает опрос, учитывая современные тенденции. Повторный контакт, в рамках сегодняшних воззрений, версифицирован. Селекция бренда традиционно консолидирует рейтинг.</p>
+            </div>
+
+        </div>
+
+        <!-----------------------------------Test video-------------------------------------->
+
+    <!--    <div class="video-wrapper">-->
+
+    <!--        <div class="video-container">-->
+
+    <!--&lt;!&ndash;            <div class="playback-animation" id="playback-animation">&ndash;&gt;-->
+    <!--&lt;!&ndash;                <svg class="playback-icons">&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <use class="hidden" href="#play"></use>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <use href="#pause"></use>&ndash;&gt;-->
+    <!--&lt;!&ndash;                </svg>&ndash;&gt;-->
+    <!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
+    <!--            <video id="video" src="img/about-us/preview.mp4" preload="metadata" poster="img/about-us/preview.jpg"></video>-->
+
+    <!--            <div class="video-controls hidden" id="video-controls">-->
+
+    <!--                <button id="play" data-title="Play (k)">-->
+    <!--                    <svg class="playback-icons">-->
+    <!--                        <use class="play-icon" href="#play"></use>-->
+    <!--                        <use class="pause-icon hidden" href="#pause"></use>-->
+    <!--                    </svg>-->
+    <!--                </button>-->
+
+    <!--            </div>-->
+
+    <!--        </div>-->
+
+    <!--    </div>-->
+
+    </main>
+
+    <!------------------------------------Footer------------------------------------------>
+
+    <footer class="footer">
 
         <div class="container">
 
-            <div class="general-title general-title--green">
-                <h2>СМИ о нас <span>Наши партнеры</span></h2>
-            </div>
+            <div class="footer-wrapper">
 
-            <div class="partners-wrapper">
+                <div class="footer-menu">
 
-                <div class="partners-logo">
-                    <a href="#">
-                        <img class="img-svg" src="img/partners/1.svg" alt="Forbes">
-                    </a>
-                </div>
-
-                <div class="partners-logo">
-                    <a href="#">
-                        <img class="img-svg" src="img/partners/2.svg" alt="Коммерсанть">
-                    </a>
-                </div>
-
-                <div class="partners-logo">
-                    <a href="#">
-                        <img class="img-svg" src="img/partners/3.svg" alt="РБК">
-                    </a>
-                </div>
-
-                <div class="partners-logo">
-                    <a href="#">
-                        <img class="img-svg" src="img/partners/4.svg" alt="ВЕДОМОСТИ">
-                    </a>
-                </div>
-
-                <div class="partners-logo">
-                    <a href="#">
-                        <img class="img-svg" src="img/partners/5.svg" alt="vc.ru">
-                    </a>
-                </div>
-
-                <div class="partners-logo">
-                    <a href="#">
-                        <img class="img-svg" src="img/partners/6.svg" alt="Republic">
-                    </a>
-                </div>
-
-                <div class="partners-logo">
-                    <a href="#">
-                        <img class="img-svg" src="img/partners/7.svg" alt="banki.ru">
-                    </a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-------------------------------------info---------------------------------------->
-
-    <div class="about-us">
-
-        <div class="about-us-video">
-            <div class="video-wrapper">
-<!--                <iframe src="https://www.youtube.com/embed/v1qhlHIXvZs?autoplay=0&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                <video id="video" src="img/about-us/preview.mp4" poster="img/about-us/preview.jpg"></video>
-                <button class="big-play-button">
-                    <svg>
-                        <use xlink:href="#play"></use>
-                    </svg>
-                </button>
-                <div class="video-controls">
-                    <div class="progress-bar">
-                        <div class="progress-bar-actual"></div>
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img class="img-svg" src="img/footer/main-logo.svg" alt="jetlend">
+                        </a>
                     </div>
-                    <div class="video-buttons">
-                        <button id="play-pause">
-                            <svg>
-                                <use xlink:href="#play"></use>
-                            </svg>
-                        </button>
-                        <div class="volume">
-                            <button id="volume-mute">
-                                <svg>
-                                    <use xlink:href="#volume"></use>
-                                </svg>
-                            </button>
-                            <div class="volume-progress-bar">
-                                <div class="volume-progress-bar-actual"></div>
-                            </div>
+
+                    <nav class="footer-nav">
+
+                        <div class="footer-nav-column">
+
+                            <ul>
+                                <li>
+                                    <a class="footer-link" href="#">инвесторам</a>
+                                </li>
+
+                                <li>
+                                    <a class="footer-link" href="#">предпринимателям</a>
+                                </li>
+
+                                <li>
+                                    <a class="footer-link" href="#">партнерам</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="footer-nav-column">
+
+                            <ul>
+                                <li>
+                                    <a class="footer-link" href="#">документы</a>
+                                </li>
+
+                                <li>
+                                    <a class="footer-link" href="#">о платформе</a>
+                                </li>
+
+                                <li>
+                                    <a class="footer-link" href="#">новости</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </nav>
+
+                    <div class="footer-address">
+                        <address>
+                            <a href="#">Москва, территория инновационного центра «Сколково», ул. Нобеля, д. 5, эт/пом/раб 2/8/2</a>
+                        </address>
+                    </div>
+
+                </div>
+
+                <div class="footer-contacts">
+
+                    <div class="footer-btn">
+                        <a href="signin.html" class="btn">
+                            <p class="btn-txt">Войти</p>
+                            <img src="img/button/enter.png" alt="enter">
+                        </a>
+                    </div>
+
+                    <div class="footer-copyright">
+
+                        <div class="copyright-txt">
+                            <p>© 2018 —2021 Все права защищены ООО «ДжетЛэнд», официальный сайт Лицензия ЦБ РФ №18</p>
+                        </div>
+
+                        <div class="copyright-logos">
+
+                            <img src="img/footer/bank.png" alt="Банк России">
+
+                            <img src="img/footer/sk.png" alt="SK">
+
                         </div>
 
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="about-us-info">
-
-            <h3>Jetlend — надежный партнер</h3>
-            <p>Спонсорство искажает бренд. Диктат потребителя, как принято считать, обычно правомочен. Стоит отметить, что управление брендом исключительно экономит потребительский conversion rate, отвоевывая свою долю рынка. Повышение жизненных стандартов притягивает опрос, учитывая современные тенденции. Повторный контакт, в рамках сегодняшних воззрений, версифицирован. Селекция бренда традиционно консолидирует рейтинг.</p>
-        </div>
-
-    </div>
-
-    <!-----------------------------------Test video-------------------------------------->
-
-<!--    <div class="video-wrapper">-->
-
-<!--        <div class="video-container">-->
-
-<!--&lt;!&ndash;            <div class="playback-animation" id="playback-animation">&ndash;&gt;-->
-<!--&lt;!&ndash;                <svg class="playback-icons">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <use class="hidden" href="#play"></use>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <use href="#pause"></use>&ndash;&gt;-->
-<!--&lt;!&ndash;                </svg>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-
-<!--            <video id="video" src="img/about-us/preview.mp4" preload="metadata" poster="img/about-us/preview.jpg"></video>-->
-
-<!--            <div class="video-controls hidden" id="video-controls">-->
-
-<!--                <button id="play" data-title="Play (k)">-->
-<!--                    <svg class="playback-icons">-->
-<!--                        <use class="play-icon" href="#play"></use>-->
-<!--                        <use class="pause-icon hidden" href="#pause"></use>-->
-<!--                    </svg>-->
-<!--                </button>-->
-
-<!--            </div>-->
-
-<!--        </div>-->
-
-<!--    </div>-->
-
-</main>
-
-<!--------------------------------------Footer-------------------------------------------->
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="footer-wrapper">
-
-            <div class="footer-menu">
-
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img class="img-svg" src="img/footer/main-logo.svg" alt="jetlend">
-                    </a>
-                </div>
-
-                <nav class="footer-nav">
-
-                    <div class="footer-nav-column">
-
-                        <ul>
-                            <li>
-                                <a class="footer-link" href="#">инвесторам</a>
-                            </li>
-
-                            <li>
-                                <a class="footer-link" href="#">предпринимателям</a>
-                            </li>
-
-                            <li>
-                                <a class="footer-link" href="#">партнерам</a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="footer-nav-column">
-
-                        <ul>
-                            <li>
-                                <a class="footer-link" href="#">документы</a>
-                            </li>
-
-                            <li>
-                                <a class="footer-link" href="#">о платформе</a>
-                            </li>
-
-                            <li>
-                                <a class="footer-link" href="#">новости</a>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                </nav>
-
-                <div class="footer-address">
-                    <address>
-                        <a href="#">Москва, территория инновационного центра «Сколково», ул. Нобеля, д. 5, эт/пом/раб 2/8/2</a>
-                    </address>
-                </div>
-
-            </div>
-
-            <div class="footer-contacts">
-
-                <div class="footer-btn">
-                    <a href="#" class="btn">
-                        <p class="btn-txt">Войти</p>
-                        <img src="img/button/enter.png" alt="enter">
-                    </a>
-                </div>
-
-                <div class="footer-copyright">
-
-                    <div class="copyright-txt">
-                        <p>© 2018 —2021 Все права защищены ООО «ДжетЛэнд», официальный сайт Лицензия ЦБ РФ №18</p>
-                    </div>
-
-                    <div class="copyright-logos">
-
-                        <img src="img/footer/bank.png" alt="Банк России">
-
-                        <img src="img/footer/sk.png" alt="SK">
-
-                    </div>
 
                 </div>
 
@@ -598,9 +602,9 @@
 
         </div>
 
-    </div>
+    </footer>
 
-</footer>
+</div>
 
 <script src="js/jQuery/_jquery.min.js"></script>
 <script src="libs/jqueryui-slider/external/jquery/jquery.js"></script>

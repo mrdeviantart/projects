@@ -1,0 +1,197 @@
+// ==================================================================
+// =========================sign form style==========================
+// ==================================================================
+
+.sign-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    background: $white;
+
+    padding: 30px 50px;
+
+    border-radius: 5px;
+    border: 1px solid rgba($black, .8);
+    box-shadow: 10px 10px 15px rgba($black, .6);
+
+    .sign-title {
+        font-family: $main-font;
+        font-weight: $medium;
+        font-size: $sign-title-size;
+        line-height: 1.32;
+
+        color: $black;
+
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+
+        border-bottom: 1px solid rgba($black, .3);
+    }
+
+    .sign-input {
+        margin: 15px 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .username-label,
+        .email-label,
+        .password-label,
+        .password-repeat-label {
+            position: absolute;
+            z-index: 2;
+            margin-bottom: 5px;
+            font-family: $main-font;
+            font-weight: $medium;
+            font-size: $sign-label-size;
+            line-height: 18px;
+
+            color: rgba($black, .7);
+
+            transform: translate(10px, 14px);
+            transition: .3s;
+
+            cursor: text;
+        }
+
+        .input-wrapper {
+            position: relative;
+            overflow: hidden;
+
+            #username,
+            #email,
+            #password,
+            #password-repeat {
+                width: 100%;
+                padding: 10px;
+
+                font-family: $main-font;
+                font-weight: $medium;
+                font-size: $sign-input-size;
+                line-height: 1.32;
+
+                color: $black;
+
+                border: 1px solid #E4ECEE;
+
+                &:focus {
+                    + .bottom-border {
+                        transform: translatex(0);
+                        transition: .4s;
+                    }
+
+                    ~ .right-border {
+                        transform: translateY(0);
+                        transition: .4s;
+                        transition-delay: .4s;
+                    }
+
+                    ~ .top-border {
+                        transform: translateY(0);
+                        transition: .4s;
+                        transition-delay: .8s;
+                    }
+
+                    ~ .left-border {
+                        transform: translateY(0);
+                        transition: .4s;
+                        transition-delay: 1.2s;
+                    }
+                }
+            }
+
+            .bottom-border,
+            .right-border,
+            .top-border,
+            .left-border {
+                display: block;
+                position: absolute;
+                background: $main-color;
+                transition: .4s;
+            }
+
+            .bottom-border,
+            .top-border {
+                width: 100%;
+                height: 1px;
+            }
+
+            .right-border,
+            .left-border {
+                height: 100%;
+                width: 1px;
+            }
+
+            .bottom-border {
+                transform: translateX(-100%);
+                bottom: 0;
+                left: 0;
+                transition-delay: 1.2s;
+            }
+
+            .right-border {
+                transform: translateY(100%);
+                right: 0;
+                bottom: 0;
+                transition-delay: .8s;
+            }
+
+            .top-border {
+                transform: translateX(100%);
+                top: 0;
+                left: 0;
+                transition-delay: .4s;
+            }
+
+            .left-border {
+                transform: translateY(-100%);
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .reset-txt {
+        margin-top: 10px;
+
+        p {
+            font-family: $main-font;
+            font-weight: $normal;
+            font-size: $reset-size;
+            line-height: 1.32;
+
+            color: $black;
+        }
+    }
+
+    .sign-btn {
+        display: flex;
+        margin-top: auto;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .sign-links {
+            display: flex;
+
+            li {
+
+                a {
+                    display: block;
+                    margin: 5px 10px;
+
+                    font-family: $main-font;
+                    font-weight: $medium;
+                    font-size: $sign-link-size;
+                    line-height: 1.32;
+
+                    color: rgba($black, .75);
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
