@@ -4,9 +4,10 @@
 
 .sign-form {
     width: 40%;
+    min-width: 500px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
-    background: $white;
     background: $white;
 
     padding: 30px 50px;
@@ -14,6 +15,16 @@
     border-radius: 5px;
     border: 1px solid rgba($black, .8);
     box-shadow: 10px 10px 15px rgba($black, .6);
+
+    @media (max-width: 600px) {
+        width: 90%;
+        min-width: auto;
+    }
+
+    @media (max-width: 425px) {
+        padding: 20px;
+        min-width: 200px;
+    }
 
     .sign-title {
         font-family: $main-font;
@@ -53,6 +64,10 @@
             transition: .3s;
 
             cursor: text;
+
+            @media (max-width: 425px) {
+                font-size: 14px;
+            }
         }
 
         .input-wrapper {
@@ -64,6 +79,7 @@
             #password,
             #password-repeat {
                 width: 100%;
+                height: 100%;
                 padding: 10px;
 
                 font-family: $main-font;
@@ -78,25 +94,25 @@
                 &:focus {
                     + .bottom-border {
                         transform: translatex(0);
-                        transition: .4s;
+                        transition: .8s;
                     }
 
                     ~ .right-border {
                         transform: translateY(0);
-                        transition: .4s;
-                        transition-delay: .4s;
+                        transition: .8s;
+                        //transition-delay: .4s;
                     }
 
                     ~ .top-border {
                         transform: translateY(0);
-                        transition: .4s;
-                        transition-delay: .8s;
+                        transition: .8s;
+                        //transition-delay: .8s;
                     }
 
                     ~ .left-border {
                         transform: translateY(0);
-                        transition: .4s;
-                        transition-delay: 1.2s;
+                        transition: .8s;
+                        //transition-delay: 1.2s;
                     }
                 }
             }
@@ -108,7 +124,7 @@
                 display: block;
                 position: absolute;
                 background: $main-color;
-                transition: .4s;
+                transition: .8s;
             }
 
             .bottom-border,
@@ -127,21 +143,21 @@
                 transform: translateX(-100%);
                 bottom: 0;
                 left: 0;
-                transition-delay: 1.2s;
+                //transition-delay: 1.2s;
             }
 
             .right-border {
                 transform: translateY(100%);
                 right: 0;
                 bottom: 0;
-                transition-delay: .8s;
+                //transition-delay: .8s;
             }
 
             .top-border {
                 transform: translateX(100%);
                 top: 0;
                 left: 0;
-                transition-delay: .4s;
+                //transition-delay: .4s;
             }
 
             .left-border {
@@ -171,8 +187,18 @@
         align-items: flex-end;
         justify-content: space-between;
 
+        @media (max-width: 570px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .sign-links {
             display: flex;
+            text-align: center;
+
+            @media (max-width: 570px) {
+                margin-top: 20px;
+            }
 
             li {
 

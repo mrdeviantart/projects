@@ -1,3 +1,12 @@
+// const headerHeight2 = $("header").innerHeight();
+// const footerHeight = $("footer").innerHeight();
+// const signWrapper = $(".sign-wrapper");
+// const windowHeight = $(window).innerHeight();
+// const signWrapperHeight = windowHeight - headerHeight2 - footerHeight;
+//
+// signWrapper.css("min-height",signWrapperHeight + "px");
+//-----------------------------------------------------------------
+
 const emailInput = $("#email");
 const passwordInput = $("#password");
 const passwordRepeatInput = $("#password-repeat");
@@ -8,8 +17,8 @@ const passwordRepeatLabel = $(".password-repeat-label");
 const userNameInputLabel = $(".username-label");
 const translateUp = "translate(0, -22px)";
 const translateDown = "translate(10px, 14px)";
-const labelSize = "16px";
-const labelSmallerSize = "15px";
+const labelSize = "15px";
+const labelSmallerSize = "14px";
 const signButton = $(".sign-btn .btn");
 
 // general function that moves the label while input is focused

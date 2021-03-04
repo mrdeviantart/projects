@@ -2,15 +2,18 @@
 // =========================sign style==========================
 // ==================================================================
 
-.signup {
-    min-height: 600px;
-    height: 100%;
+.sign {
     background: $bg-rg-color;
 }
 
-.signup-wrapper {
-    height: 100%;
+.sign-wrapper {
+    min-height: calc(100vh - 116px - 228px);
     display: flex;
     justify-content: center;
-    padding: 30px 0 100px;
+    align-items: center;
+    padding: 30px 0;
+
+    @media (max-width: 600px) {
+        padding: 50px 0;
+    }
 }

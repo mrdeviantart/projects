@@ -3,12 +3,14 @@
 // ==================================================================
 
 .page {
-    display: grid;
-    grid-template-areas: "header" "main" "footer";
-    grid-template-rows: auto 1fr auto;
+    //display: grid;
+    //grid-template-areas: "header" "main" "footer";
+    //grid-template-rows: auto 1fr auto;
+
+    display: flex;
+    flex-direction: column;
 
     min-height: 100vh;
 
     overflow: hidden;
-
 }

@@ -25,9 +25,9 @@ input[type='number'] { -moz-appearance: textfield; }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; }
 
-input[type='number']:focus, input[type='text']:focus, input[type='email']:focus, input[type='password']:focus { outline: none; }
+input:focus { outline: none; }
 
-input[type='range']:focus { outline: none; }
+input { -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-border-radius: 0; }
 
 .btn { padding: 13px 35px 15px 34px; display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; background: #0ed193; border-radius: 5px; font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 15px; line-height: 1.35; text-align: center; color: #ffffff; -ms-flex-item-align: center; align-self: center; }
 
@@ -51,7 +51,7 @@ button[type=submit]:focus { outline: none; }
 
 @font-face { font-family: 'Red Ring'; src: url("../fonts/RedRing-Regular.eot"); src: local("Red Ring Regular"), local("RedRing-Regular"), url("../fonts/RedRing-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/RedRing-Regular.woff2") format("woff2"), url("../fonts/RedRing-Regular.woff") format("woff"), url("../fonts/RedRing-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-.page { display: -ms-grid; display: grid; grid-template-areas: "header" "main" "footer"; -ms-grid-rows: auto 1fr auto; grid-template-rows: auto 1fr auto; min-height: 100vh; overflow: hidden; }
+.page { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; min-height: 100vh; overflow: hidden; }
 
 .general-title { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; text-align: center; position: relative; z-index: 1; }
 
@@ -346,7 +346,7 @@ button[type=submit]:focus { outline: none; }
 
 .benefits-wrapper { padding: 60px 0 45px; }
 
-.benefits-wrapper .benefits-content { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; margin: 37px -10px 0; }
+.benefits-wrapper .benefits-content { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 100%; margin-top: 37px; }
 
 @media (max-width: 768px) { .benefits-wrapper .benefits-content { margin-left: 0; margin-right: 0; } }
 
@@ -450,17 +450,9 @@ button[type=submit]:focus { outline: none; }
 
 @media (max-width: 370px) { .stages-wrapper .stages-location .location-item .location-txt p { font-size: 12px; } }
 
-.form-container { position: absolute; bottom: -45%; left: 50%; -ms-transform: translateX(-50%); transform: translateX(-50%); }
+.form-container { position: absolute; bottom: -60%; left: 50%; -ms-transform: translateX(-50%); transform: translateX(-50%); }
 
-@media (max-width: 1024px) { .form-container { bottom: -60%; } }
-
-@media (max-width: 768px) { .form-container { bottom: -35%; } }
-
-@media (max-width: 600px) { .form-container { bottom: -30%; } }
-
-@media (max-width: 450px) { .form-container { bottom: -36%; } }
-
-@media (max-width: 450px) { .form-container { bottom: -40%; } }
+@media (max-width: 600px) { .form-container { bottom: -55%; } }
 
 .form-wrapper { padding: 50px 125px 54px 108px; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; background: #ffffff; }
 
@@ -522,13 +514,13 @@ button[type=submit]:focus { outline: none; }
 
 .partners { background: #E5E5E5; padding: 314px 0 56px; }
 
-@media (max-width: 1024px) { .partners { padding-top: 400px; } }
+@media (max-width: 1024px) { .partners { padding-top: 380px; } }
 
-@media (max-width: 768px) { .partners { padding-top: 290px; } }
+@media (max-width: 768px) { .partners { padding-top: 310px; } }
 
 @media (max-width: 600px) { .partners { padding-top: 250px; } }
 
-@media (max-width: 450px) { .partners { padding-top: 320px; } }
+@media (max-width: 450px) { .partners { padding-top: 280px; } }
 
 @media (max-width: 385px) { .partners { padding-top: 300px; } }
 
@@ -630,6 +622,8 @@ button[type=submit]:focus { outline: none; }
 
 .footer { padding: 54px 0 34px; background: #000000; margin-top: auto; }
 
+@media (max-width: 425px) { .footer { padding: 30px 0 10px; } }
+
 .footer-wrapper { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 @media (max-width: 1024px) { .footer-wrapper { -ms-flex-direction: column; flex-direction: column; } }
@@ -654,6 +648,8 @@ button[type=submit]:focus { outline: none; }
 
 .footer-wrapper .footer-menu .footer-nav .footer-nav-column ul li .footer-link { font-family: "Red Ring", sans-serif; font-weight: 400; font-size: 13px; line-height: 1.31; color: #ffffff; position: relative; }
 
+@media (max-width: 425px) { .footer-wrapper .footer-menu .footer-nav .footer-nav-column ul li .footer-link { font-size: 12px; } }
+
 .footer-wrapper .footer-menu .footer-nav .footer-nav-column ul li .footer-link:before { content: ""; position: absolute; bottom: -4px; width: 0; height: 2px; background: #0ed193; transition: .3s linear; }
 
 .footer-wrapper .footer-menu .footer-nav .footer-nav-column ul li .footer-link:hover:before { width: 100%; transition: .3s linear; }
@@ -663,6 +659,8 @@ button[type=submit]:focus { outline: none; }
 .footer-wrapper .footer-menu .footer-address address { font-style: normal; }
 
 .footer-wrapper .footer-menu .footer-address address a { font-family: "Red Ring", sans-serif; font-weight: 400; font-size: 13px; line-height: 1.31; color: rgba(255, 255, 255, 0.8); }
+
+@media (max-width: 425px) { .footer-wrapper .footer-menu .footer-address address a { font-size: 12px; } }
 
 .footer-wrapper .footer-menu .footer-address address a:hover { text-decoration: underline; }
 
@@ -678,11 +676,17 @@ button[type=submit]:focus { outline: none; }
 
 .footer-wrapper .footer-contacts .footer-copyright .copyright-txt p { font-family: "Red Ring", sans-serif; font-weight: 400; font-size: 13px; line-height: 1.31; color: rgba(255, 255, 255, 0.8); }
 
-.footer-wrapper .footer-contacts .footer-copyright .copyright-logos { display: -ms-flexbox; display: flex; margin: 0 -8px; }
+@media (max-width: 425px) { .footer-wrapper .footer-contacts .footer-copyright .copyright-txt p { font-size: 12px; } }
 
-.footer-wrapper .footer-contacts .footer-copyright .copyright-logos img { display: block; -o-object-fit: cover; object-fit: cover; margin: 0 8px; }
+.footer-wrapper .footer-contacts .footer-copyright .copyright-logos { display: -ms-flexbox; display: flex; margin: 0 -8px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-.sign-form { width: 40%; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; background: #ffffff; background: #ffffff; padding: 30px 50px; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.8); box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6); }
+.footer-wrapper .footer-contacts .footer-copyright .copyright-logos img { display: block; -o-object-fit: cover; object-fit: cover; margin: 0 8px 10px; }
+
+.sign-form { width: 40%; min-width: 500px; min-height: 500px; display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; background: #ffffff; padding: 30px 50px; border-radius: 5px; border: 1px solid rgba(0, 0, 0, 0.8); box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6); }
+
+@media (max-width: 600px) { .sign-form { width: 90%; min-width: auto; } }
+
+@media (max-width: 425px) { .sign-form { padding: 20px; min-width: 200px; } }
 
 .sign-form .sign-title { font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 28px; line-height: 1.32; color: #000000; padding-bottom: 5px; margin-bottom: 15px; border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
 
@@ -690,29 +694,31 @@ button[type=submit]:focus { outline: none; }
 
 .sign-form .sign-input .username-label, .sign-form .sign-input .email-label, .sign-form .sign-input .password-label, .sign-form .sign-input .password-repeat-label { position: absolute; z-index: 2; margin-bottom: 5px; font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 16px; line-height: 18px; color: rgba(0, 0, 0, 0.7); -ms-transform: translate(10px, 14px); transform: translate(10px, 14px); transition: .3s; cursor: text; }
 
+@media (max-width: 425px) { .sign-form .sign-input .username-label, .sign-form .sign-input .email-label, .sign-form .sign-input .password-label, .sign-form .sign-input .password-repeat-label { font-size: 14px; } }
+
 .sign-form .sign-input .input-wrapper { position: relative; overflow: hidden; }
 
-.sign-form .sign-input .input-wrapper #username, .sign-form .sign-input .input-wrapper #email, .sign-form .sign-input .input-wrapper #password, .sign-form .sign-input .input-wrapper #password-repeat { width: 100%; padding: 10px; font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 18px; line-height: 1.32; color: #000000; border: 1px solid #E4ECEE; }
+.sign-form .sign-input .input-wrapper #username, .sign-form .sign-input .input-wrapper #email, .sign-form .sign-input .input-wrapper #password, .sign-form .sign-input .input-wrapper #password-repeat { width: 100%; height: 100%; padding: 10px; font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 18px; line-height: 1.32; color: #000000; border: 1px solid #E4ECEE; }
 
-.sign-form .sign-input .input-wrapper #username:focus + .bottom-border, .sign-form .sign-input .input-wrapper #email:focus + .bottom-border, .sign-form .sign-input .input-wrapper #password:focus + .bottom-border, .sign-form .sign-input .input-wrapper #password-repeat:focus + .bottom-border { -ms-transform: translatex(0); transform: translatex(0); transition: .4s; }
+.sign-form .sign-input .input-wrapper #username:focus + .bottom-border, .sign-form .sign-input .input-wrapper #email:focus + .bottom-border, .sign-form .sign-input .input-wrapper #password:focus + .bottom-border, .sign-form .sign-input .input-wrapper #password-repeat:focus + .bottom-border { -ms-transform: translatex(0); transform: translatex(0); transition: .8s; }
 
-.sign-form .sign-input .input-wrapper #username:focus ~ .right-border, .sign-form .sign-input .input-wrapper #email:focus ~ .right-border, .sign-form .sign-input .input-wrapper #password:focus ~ .right-border, .sign-form .sign-input .input-wrapper #password-repeat:focus ~ .right-border { -ms-transform: translateY(0); transform: translateY(0); transition: .4s; transition-delay: .4s; }
+.sign-form .sign-input .input-wrapper #username:focus ~ .right-border, .sign-form .sign-input .input-wrapper #email:focus ~ .right-border, .sign-form .sign-input .input-wrapper #password:focus ~ .right-border, .sign-form .sign-input .input-wrapper #password-repeat:focus ~ .right-border { -ms-transform: translateY(0); transform: translateY(0); transition: .8s; }
 
-.sign-form .sign-input .input-wrapper #username:focus ~ .top-border, .sign-form .sign-input .input-wrapper #email:focus ~ .top-border, .sign-form .sign-input .input-wrapper #password:focus ~ .top-border, .sign-form .sign-input .input-wrapper #password-repeat:focus ~ .top-border { -ms-transform: translateY(0); transform: translateY(0); transition: .4s; transition-delay: .8s; }
+.sign-form .sign-input .input-wrapper #username:focus ~ .top-border, .sign-form .sign-input .input-wrapper #email:focus ~ .top-border, .sign-form .sign-input .input-wrapper #password:focus ~ .top-border, .sign-form .sign-input .input-wrapper #password-repeat:focus ~ .top-border { -ms-transform: translateY(0); transform: translateY(0); transition: .8s; }
 
-.sign-form .sign-input .input-wrapper #username:focus ~ .left-border, .sign-form .sign-input .input-wrapper #email:focus ~ .left-border, .sign-form .sign-input .input-wrapper #password:focus ~ .left-border, .sign-form .sign-input .input-wrapper #password-repeat:focus ~ .left-border { -ms-transform: translateY(0); transform: translateY(0); transition: .4s; transition-delay: 1.2s; }
+.sign-form .sign-input .input-wrapper #username:focus ~ .left-border, .sign-form .sign-input .input-wrapper #email:focus ~ .left-border, .sign-form .sign-input .input-wrapper #password:focus ~ .left-border, .sign-form .sign-input .input-wrapper #password-repeat:focus ~ .left-border { -ms-transform: translateY(0); transform: translateY(0); transition: .8s; }
 
-.sign-form .sign-input .input-wrapper .bottom-border, .sign-form .sign-input .input-wrapper .right-border, .sign-form .sign-input .input-wrapper .top-border, .sign-form .sign-input .input-wrapper .left-border { display: block; position: absolute; background: #0ed193; transition: .4s; }
+.sign-form .sign-input .input-wrapper .bottom-border, .sign-form .sign-input .input-wrapper .right-border, .sign-form .sign-input .input-wrapper .top-border, .sign-form .sign-input .input-wrapper .left-border { display: block; position: absolute; background: #0ed193; transition: .8s; }
 
 .sign-form .sign-input .input-wrapper .bottom-border, .sign-form .sign-input .input-wrapper .top-border { width: 100%; height: 1px; }
 
 .sign-form .sign-input .input-wrapper .right-border, .sign-form .sign-input .input-wrapper .left-border { height: 100%; width: 1px; }
 
-.sign-form .sign-input .input-wrapper .bottom-border { -ms-transform: translateX(-100%); transform: translateX(-100%); bottom: 0; left: 0; transition-delay: 1.2s; }
+.sign-form .sign-input .input-wrapper .bottom-border { -ms-transform: translateX(-100%); transform: translateX(-100%); bottom: 0; left: 0; }
 
-.sign-form .sign-input .input-wrapper .right-border { -ms-transform: translateY(100%); transform: translateY(100%); right: 0; bottom: 0; transition-delay: .8s; }
+.sign-form .sign-input .input-wrapper .right-border { -ms-transform: translateY(100%); transform: translateY(100%); right: 0; bottom: 0; }
 
-.sign-form .sign-input .input-wrapper .top-border { -ms-transform: translateX(100%); transform: translateX(100%); top: 0; left: 0; transition-delay: .4s; }
+.sign-form .sign-input .input-wrapper .top-border { -ms-transform: translateX(100%); transform: translateX(100%); top: 0; left: 0; }
 
 .sign-form .sign-input .input-wrapper .left-border { -ms-transform: translateY(-100%); transform: translateY(-100%); bottom: 0; left: 0; }
 
@@ -722,14 +728,20 @@ button[type=submit]:focus { outline: none; }
 
 .sign-form .sign-btn { display: -ms-flexbox; display: flex; margin-top: auto; -ms-flex-align: end; align-items: flex-end; -ms-flex-pack: justify; justify-content: space-between; }
 
-.sign-form .sign-btn .sign-links { display: -ms-flexbox; display: flex; }
+@media (max-width: 570px) { .sign-form .sign-btn { -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; } }
+
+.sign-form .sign-btn .sign-links { display: -ms-flexbox; display: flex; text-align: center; }
+
+@media (max-width: 570px) { .sign-form .sign-btn .sign-links { margin-top: 20px; } }
 
 .sign-form .sign-btn .sign-links li a { display: block; margin: 5px 10px; font-family: "Red Ring", sans-serif; font-weight: 500; font-size: 13px; line-height: 1.32; color: rgba(0, 0, 0, 0.75); }
 
 .sign-form .sign-btn .sign-links li a:hover { text-decoration: underline; }
 
-.signup { min-height: 600px; height: 100%; background: radial-gradient(70% 380% at 6% 10%, #0a2e37 36%, #000000 100%); }
+.sign { background: radial-gradient(70% 380% at 6% 10%, #0a2e37 36%, #000000 100%); }
 
-.signup-wrapper { height: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; padding: 30px 0 100px; }
+.sign-wrapper { min-height: calc(100vh - 116px - 228px); display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; padding: 30px 0; }
+
+@media (max-width: 600px) { .sign-wrapper { padding: 50px 0; } }
 
 /*# sourceMappingURL=style.css.map */
