@@ -60,15 +60,20 @@
 
             .big-play-button {
                 position: absolute;
-                top: 0;
-                left: 0;
+                //top: 0;
+                //left: 0;
                 z-index: 5;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
 
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 100%;
-                height: 100%;
+                //width: 100%;
+                //height: 100%;
+                width: 60px;
+                height: 60px;
                 padding: 0;
 
                 background: none;
@@ -76,11 +81,12 @@
                 outline: none;
                 cursor: pointer;
                 opacity: 1;
+                transition: .5s;
 
                 svg {
                     display: block;
-                    width: 60px;
-                    height: 60px;
+                    width: 100%;
+                    height: 100%;
                     fill: $white;
 
                     @media (max-width: 425px) {
@@ -108,8 +114,9 @@
                 position: absolute;
                 bottom: 0;
                 background: rgba($black, .4);
+                z-index: 100;
 
-                transform: translateY(100%);
+                //transform: translateY(100%);
 
                 transition: .3s;
 
@@ -118,21 +125,88 @@
                     //pointer-events: none;
                 }
 
-                .progress-bar {
-                    width: 100%;
-                    height: 6px;
-                    top: 0;
-                    left: 0;
-                    background: rgba($black, .3);
+                .video-progress {
+                    height: 8px;
+                    display: flex;
+                    flex-direction: column;
 
-                    cursor: pointer;
+                    position: relative;
 
-                    .progress-bar-actual {
+                    #video-progress-bar {
                         height: 100%;
-                        width: 0;
-                        background: $main-color;
-                        border-top-right-radius: 3px;
-                        border-bottom-right-radius: 3px;
+
+                        &::-webkit-progress-bar,
+                        &::-webkit-progress-value {
+                            display: block;
+                            width: 100%;
+                            height: 4px;
+                            border-radius: 8px;
+                        }
+
+                        &::-webkit-progress-bar {
+                            background: rgba($black, .4);
+                        }
+
+                        &::-webkit-progress-value {
+                            background: $main-color;
+                        }
+                    }
+
+                    #seek {
+                        position: absolute;
+                        top: -9px;
+                        left: -2px;
+
+                        &:hover {
+                            &::-webkit-slider-thumb {
+                                opacity: 1;
+                                transition: .3s;
+                            }
+
+                            + #seek-tooltip {
+                                opacity: 1;
+                            }
+                        }
+
+                        &::-webkit-slider-thumb {
+                            display: block;
+                            width: 15px;
+                            height: 15px;
+                            background: $main-color;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            transform: translateY(1px);
+
+                            opacity: 0;
+                            transition: .3s;
+                        }
+
+                        &::-webkit-slider-runnable-track {
+                            display: block;
+                            width: 100%;
+                            height: 10px;
+                            background: transparent;
+                            cursor: pointer;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    #seek-tooltip {
+                        display: flex;
+                        width: 40px;
+
+                        position: absolute;
+                        top: -25px;
+                        left: 0;
+
+                        font-family: $main-font;
+                        font-weight: $normal;
+                        font-size: 14px;
+                        line-height: 1;
+
+                        color: $white;
+
+                        opacity: 0;
                     }
                 }
 
@@ -144,8 +218,7 @@
                         padding: 7px;
                     }
 
-                    #play-pause,
-                    #volume-mute {
+                    #play-pause {
                         display: block;
                         width: 30px;
                         height: 30px;
@@ -177,48 +250,119 @@
                         margin-right: 15px;
                     }
 
-                    .volume {
+                    .volume-controls {
                         display: flex;
                         align-items: center;
                         overflow: hidden;
 
                         &:hover {
-                            > .volume-progress-bar {
+                            transition: .3s;
+
+                            .volume-progress {
                                 width: 80px;
                                 transition: .3s;
+
+                                #volume {
+                                    opacity: 1;
+                                    transition: .3s;
+                                }
                             }
                         }
 
                         #volume-mute {
                             margin-right: 10px;
-                        }
 
-                        .volume-progress-bar {
                             display: block;
-                            width: 0;
-                            height: 5px;
-                            background: rgba($black, .3);
-
-                            border-radius: 2.5px;
-
-                            transition: .3s;
-
+                            width: 30px;
+                            height: 30px;
+                            padding: 0;
+                            background: none;
+                            border: none;
+                            outline: none;
                             cursor: pointer;
 
-                            @media (max-width: 425px) {
-                                width: 60px;
-                                height: 4px;
-                            }
-
-                            .volume-progress-bar-actual {
+                            svg {
                                 display: block;
                                 width: 100%;
                                 height: 100%;
-                                background: $main-color;
-
-                                border-radius: 2.5px;
+                                fill: $white;
                             }
                         }
+
+                        .volume-progress {
+                            width: 0;
+                            height: 100%;
+                            position: relative;
+                            transition: .3s;
+
+                            #volume-progress-bar {
+                                height: 5px;
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+
+                                &::-webkit-progress-bar,
+                                &::-webkit-progress-value {
+                                    display: block;
+                                    width: 80px;
+                                    height: 5px;
+                                    border-radius: 5px;
+                                }
+
+                                &::-webkit-progress-bar {
+                                    background: rgba($black, .4);
+                                }
+
+                                &::-webkit-progress-value {
+                                    background: $main-color;
+                                }
+                            }
+
+                            #volume {
+                                position: absolute;
+                                left: -2px;
+                                top: 6px;
+                                opacity: 0;
+                                transition: .3s;
+
+                                &::-webkit-slider-thumb {
+                                    display: block;
+                                    width: 12px;
+                                    height: 12px;
+                                    background: $main-color;
+                                    border-radius: 50%;
+                                    cursor: pointer;
+                                    transform: translateY(1px);
+                                }
+
+                                &::-webkit-slider-runnable-track {
+                                    display: block;
+                                    width: 80px;
+                                    height: 15px;
+                                    background: transparent;
+                                    cursor: pointer;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .video-time {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 10px;
+
+                    time,
+                    span {
+                        font-family: $main-font;
+                        font-weight: $normal;
+                        font-size: 14px;
+                        line-height: 1;
+
+                        color: $white;
                     }
                 }
             }

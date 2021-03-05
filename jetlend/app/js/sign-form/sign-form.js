@@ -3,8 +3,9 @@
 // const signWrapper = $(".sign-wrapper");
 // const windowHeight = $(window).innerHeight();
 // const signWrapperHeight = windowHeight - headerHeight2 - footerHeight;
-//
-// signWrapper.css("min-height",signWrapperHeight + "px");
+
+// signWrapper.css("min-height",signWrapperHeight);
+
 //-----------------------------------------------------------------
 
 const emailInput = $("#email");

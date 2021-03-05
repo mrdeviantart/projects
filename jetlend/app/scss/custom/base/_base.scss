@@ -97,3 +97,33 @@ input:focus {
      appearance: none;
      -webkit-border-radius: 0;
  }
+
+ input[type="range"] {
+     -webkit-appearance: none;
+     width: 100%;
+     background: transparent;
+
+     &::-webkit-slider-thumb {
+         -webkit-appearance: none;
+     }
+
+     &-ms-track {
+         width: 100%;
+         cursor: pointer;
+
+         background: transparent;
+         border-color: transparent;
+         color: transparent;
+     }
+ }
+
+ progress {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     width: 100%;
+ }
+
+ .hidden {
+     display: none;
+ }
