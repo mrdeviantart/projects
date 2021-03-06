@@ -7,10 +7,8 @@ const playButtonIcon = document.querySelector("#play-pause svg use");
 const progressBar = document.getElementById("video-progress-bar");
 const seek = document.getElementById("seek");
 const seekTooltip = document.getElementById("seek-tooltip");
-
 const timeElapsed = document.getElementById("video-time-elapsed");
 const duration1 = document.getElementById("video-duration");
-
 //------------------------------------------------------------------------//
 
 //check if user has JS enabled, if yes -> show custom, if no -> show native controls
@@ -44,6 +42,7 @@ function togglePlay() {
 
 bigPlayButton.addEventListener("click", togglePlay);
 playButton.addEventListener("click", togglePlay);
+video.addEventListener("click", togglePlay);
 //---------------------------
 
 //update time----------------------------------------------------
@@ -76,14 +75,14 @@ video.addEventListener("timeupdate", updateTimeElapsed);
 //-----------------------
 
 // update progress duration bar ---------------------------
-window.addEventListener("load", function () {
-    const videoWrapperWidth = document.getElementById("video-wrapper").offsetWidth;
-    console.log(videoWrapperWidth);
-});
-window.addEventListener("resize", function () {
-    const videoWrapperWidth = document.getElementById("video-wrapper").offsetWidth;
-    console.log(videoWrapperWidth);
-});
+// window.addEventListener("load", function () {
+//     const videoWrapperWidth = document.getElementById("video-wrapper").offsetWidth;
+//     console.log(videoWrapperWidth);
+// });
+// window.addEventListener("resize", function () {
+//     const videoWrapperWidth = document.getElementById("video-wrapper").offsetWidth;
+//     console.log(videoWrapperWidth);
+// });
 
 function updateProgress() {
     seek.value = Math.round(video.currentTime);
@@ -108,8 +107,16 @@ function updateSeekTooltip(event) {
     // console.log(rect.left);
 }
 
+function skipAhead(event) {
+    const skipTo = event.target.dataset.seek ? event.target.dataset.seek : event.target.value;
+    video.currentTime = skipTo;
+    progressBar.value = skipTo
+    seek.value = skipTo;
+}
+
 video.addEventListener("timeupdate", updateProgress);
 seek.addEventListener("mousemove", updateSeekTooltip);
+seek.addEventListener("input", skipAhead);
 //------------------
 
 //volume update -------------------------------------------------

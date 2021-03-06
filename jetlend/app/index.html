@@ -455,6 +455,7 @@
                     <div id="video-controls" class="video-controls hidden">
                         <div class="video-progress">
                             <progress id="video-progress-bar" value="0"></progress>
+                            <label for="seek"></label>
                             <input type="range" id="seek" min="0" step="0" value="0">
                             <div id="seek-tooltip">00:00</div>
                         </div>
@@ -473,7 +474,8 @@
                                 </button>
                                 <div class="volume-progress">
                                     <progress id="volume-progress-bar" max="1" value="1"></progress>
-                                    <input type="range" class="volume" id="volume" min="0" max="1" step="0.01" value="1">
+                                    <label for="volume"></label>
+                                    <input id="volume" type="range" class="volume" min="0" max="1" step="0.01" value="1">
                                 </div>
                             </div>
                             <div class="video-time">
@@ -481,7 +483,6 @@
                                 <span>&nbsp;/&nbsp;</span>
                                 <time id="video-duration">00:00</time>
                             </div>
-
                         </div>
                     </div>
                 </div>
