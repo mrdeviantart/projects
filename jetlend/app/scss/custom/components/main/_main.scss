@@ -4,12 +4,9 @@
 
 .main {
     overflow: hidden;
+    padding-top: 116px;
 
-    &-active {
-        padding-top: 116px; // for header fixed
-
-        @media (max-width: 992px) {
-            padding-top: 90px;
-        }
+    @media (max-width: 992px) {
+        padding-top: 90px;
     }
 }

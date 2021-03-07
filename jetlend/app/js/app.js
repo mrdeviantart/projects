@@ -5,6 +5,8 @@ function include(url) {
     document.getElementsByTagName('head')[0].appendChild(script);
 }
 
+include("js/preloader/preloader.js"); // preloader js
+
 include("js/img/img.js"); // img ---> inline svg
 
 include("js/header/burger.js"); // include burger menu

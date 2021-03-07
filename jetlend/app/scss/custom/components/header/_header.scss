@@ -2,9 +2,18 @@
 // =========================header style=============================
 // ==================================================================
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
+    width: 100%;
     background: $white;
+
+    transition: all .3s ease;
+
+    &--hidden {
+        transform: translateY(-100%);
+    }
 
     .show-menu & {
         &:after {
@@ -20,33 +29,33 @@
         }
     }
 
-    &--fixed {
-        position: fixed;
-        top: 0;
-        left: 50%;
-        z-index: 1000;
-        transform: translateX(-50%);
-        width: 100vw;
-
-        background: $white;
-        box-shadow: 0 0 20px rgba($black, 1);
-
-
-        animation-name: showHeader;
-        animation-duration: .8s;
-
-        @keyframes showHeader {
-            0% {
-                opacity: 0;
-                top: -150px;
-            }
-
-            100% {
-                opacity: 1;
-                top: 0;
-            }
-        }
-    }
+    //&--fixed {
+    //    position: fixed;
+    //    top: 0;
+    //    left: 50%;
+    //    z-index: 1000;
+    //    transform: translateX(-50%);
+    //    width: 100vw;
+    //
+    //    background: $white;
+    //    box-shadow: 0 0 20px rgba($black, 1);
+    //
+    //
+    //    animation-name: showHeader;
+    //    animation-duration: .8s;
+    //
+    //    @keyframes showHeader {
+    //        0% {
+    //            opacity: 0;
+    //            top: -150px;
+    //        }
+    //
+    //        100% {
+    //            opacity: 1;
+    //            top: 0;
+    //        }
+    //    }
+    //}
 }
 
 .header-wrapper {
@@ -163,7 +172,7 @@
                     }
 
                     @media (max-width: 992px) {
-                        transform: translateX(-200%);
+                        transform: translateX(200%);
                         transition: .3s;
 
                         &.active {
@@ -212,12 +221,12 @@
 
             .nav-btn {
                 display: flex;
-                transform: translateX(-200%);
-                transition: .3s;
 
                 @media (max-width: 992px) {
                     width: 100%;
                     margin: 10px 0;
+                    transform: translateX(200%);
+                    transition: .3s;
 
                     &.active {
                         transform: translateX(0);
