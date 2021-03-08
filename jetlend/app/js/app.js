@@ -13,6 +13,8 @@ include("js/header/burger.js"); // include burger menu
 
 include("js/header/header-fixed.js"); // include header-fixed
 
+include("js/intro/intro.js"); // include intro slider content
+
 include("js/form/form.js"); // include form
 
 include("js/about-us/about-us.js"); // video player

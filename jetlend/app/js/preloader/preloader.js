@@ -1,13 +1,12 @@
 let
-    images = document.images,
-    videos = document.querySelector("video"),
-    imgVid = [...images, videos],
-    imgVidTotalCount = imgVid.length,
-    imgVidLoadedCount = 0,
+    // images = document.images,
+    // videos = document.querySelector("video"),
+    // imgVid = [...images, videos],
+    // imgVidTotalCount = imgVid.length,
+    // imgVidLoadedCount = 0,
     preloader = document.getElementById("preloader"),
     percentage = document.getElementById("percentage"),
     loadProgress = document.getElementById("load-progress");
-console.log(loadProgress);
 
 // for (let i = 0; i < imgVidTotalCount; i++) {
 //     let image_clone = new Image();

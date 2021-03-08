@@ -16,19 +16,19 @@
 
 <div class="page">
 
-    <div id="preloader" class="preloader">
-        <div class="preloader-container">
-            <div class="percent">
-                <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle id="load-progress" cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="number">
-                    <span id="percentage">0%</span>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div id="preloader" class="preloader">-->
+<!--        <div class="preloader-container">-->
+<!--            <div class="percent">-->
+<!--                <svg>-->
+<!--                    <circle cx="70" cy="70" r="70"></circle>-->
+<!--                    <circle id="load-progress" cx="70" cy="70" r="70"></circle>-->
+<!--                </svg>-->
+<!--                <div class="number">-->
+<!--                    <span id="percentage">0%</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <!-----------------------------------Video Buttons---------------------------------------->
 
@@ -94,7 +94,10 @@
         <div class="container">
             <div class="header-wrapper">
                 <a class="logo" href="index.html">
-                    <img src="img/header/logo.png" alt="jetlend logo">
+                    <picture>
+                        <source srcset="img/header/logo.webp" type="image/webp">
+                        <img src="img/header/logo.png" alt="jetlend logo">
+                    </picture>
                 </a>
 
                 <div class="menu">
@@ -168,29 +171,57 @@
                 <div class="intro-wrapper">
 
                     <div class="intro-logos">
-                        <img src="img/intro/bank.png" alt="bank">
-                        <img src="img/intro/sk.png" alt="sk partner">
+                        <picture>
+                            <source srcset="img/intro/bank.webp" type="image/webp">
+                            <img src="img/intro/bank.png" alt="bank">
+                        </picture>
+                        <picture>
+                            <source srcset="img/intro/sk.webp" type="image/webp">
+                            <img src="img/intro/sk.png" alt="SK">
+                        </picture>
                     </div>
 
                     <nav class="intro-nav">
-                        <div class="intro-nav-link">
-                            <a class="intro-nav-btn active" href="#">Обзор</a>
+                        <div class="intro-nav-wrapper">
+                            <div class="intro-nav-btn">
+                                <button>Обзор</button>
+                            </div>
+                            <div class="intro-nav-btn">
+                                <button>Условия</button>
+                            </div>
+                            <div class="intro-nav-btn">
+                                <button>Вопросы</button>
+                            </div>
                         </div>
-                        <div class="intro-nav-link">
-                            <a class="intro-nav-btn" href="#">Условия</a>
-                        </div>
-                        <div class="intro-nav-link">
-                            <a class="intro-nav-btn" href="#">Вопросы</a>
-                        </div>
+                        <div class="intro-nav-arrow"></div>
                     </nav>
 
                     <div class="intro-info">
-                        <h1 class="intro-title">Кредит на пополнение оборотных средств</h1>
+                        <div class="intro-info-item">
+                            <h1 class="intro-title">Кредит на пополнение оборотных средств</h1>
 
-                        <div class="intro-txt">
-                            <p>Сумма до 5 000 000 ₽</p>
-                            <p>Ставка от 11% годовых</p>
-                            <p>Срок до 12 месяцев</p>
+                            <div class="intro-txt">
+                                <p>Сумма до 10 000 000 ₽</p>
+                                <p>Ставка от 11% годовых</p>
+                                <p>Срок до 12 месяцев</p>
+                            </div>
+                        </div>
+                        <div class="intro-info-item">
+                            <h1 class="intro-title">Всего за 10 минут!</h1>
+
+                            <div class="intro-txt">
+                                <p>Возраст старше 18 лет</p>
+                                <p>Наличие паспорта</p>
+                                <p>Наличие мозгов</p>
+                            </div>
+                        </div>
+                        <div class="intro-info-item">
+                            <h1 class="intro-title">Если есть вопросы, задавайте консультанту</h1>
+
+                            <div class="intro-txt">
+                                <p>Как получить кредит?</p>
+                                <p>Что? Где? Когда?</p>
+                            </div>
                         </div>
                     </div>
 
@@ -199,7 +230,10 @@
                     </div>
 
                     <div class="intro-img">
-                        <img src="img/intro/man.png" alt="the BOSS">
+                        <picture>
+                            <source srcset="img/intro/man.webp" type="image/webp">
+                            <img src="img/intro/man.png" alt="the BOSS">
+                        </picture>
                     </div>
 
                 </div>
@@ -518,36 +552,6 @@
 
         </div>
 
-        <!-----------------------------------Test video-------------------------------------->
-
-    <!--    <div class="video-wrapper">-->
-
-    <!--        <div class="video-container">-->
-
-    <!--&lt;!&ndash;            <div class="playback-animation" id="playback-animation">&ndash;&gt;-->
-    <!--&lt;!&ndash;                <svg class="playback-icons">&ndash;&gt;-->
-    <!--&lt;!&ndash;                    <use class="hidden" href="#play"></use>&ndash;&gt;-->
-    <!--&lt;!&ndash;                    <use href="#pause"></use>&ndash;&gt;-->
-    <!--&lt;!&ndash;                </svg>&ndash;&gt;-->
-    <!--&lt;!&ndash;            </div>&ndash;&gt;-->
-
-    <!--            <video id="video" src="img/about-us/preview.mp4" preload="metadata" poster="img/about-us/preview.jpg"></video>-->
-
-    <!--            <div class="video-controls hidden" id="video-controls">-->
-
-    <!--                <button id="play" data-title="Play (k)">-->
-    <!--                    <svg class="playback-icons">-->
-    <!--                        <use class="play-icon" href="#play"></use>-->
-    <!--                        <use class="pause-icon hidden" href="#pause"></use>-->
-    <!--                    </svg>-->
-    <!--                </button>-->
-
-    <!--            </div>-->
-
-    <!--        </div>-->
-
-    <!--    </div>-->
-
     </main>
 
     <!------------------------------------Footer------------------------------------------>
@@ -650,9 +654,10 @@
 </div>
 
 <script src="js/jQuery/_jquery.min.js"></script>
-<script src="libs/jqueryui-slider/external/jquery/jquery.js"></script>
+<!--<script src="libs/jqueryui-slider/external/jquery/jquery.js"></script>-->
 <script src="libs/jqueryui-slider/jquery-ui.min.js"></script>
 <script src="libs/jqueryui-slider/jquery.ui.touch-punch.min.js"></script>
+<script src="js/intro/slick.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

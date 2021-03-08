@@ -10,9 +10,12 @@
     background: $white;
 
     transition: all .3s ease;
+    opacity: 1;
 
     &--hidden {
         transform: translateY(-100%);
+        opacity: 0;
+        transition: all .3s ease;
     }
 
     .show-menu & {
