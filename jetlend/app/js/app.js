@@ -15,11 +15,9 @@ include("js/header/header-fixed.js"); // include header-fixed
 
 include("js/intro/intro.js"); // include intro slider content
 
-include("js/form/form.js"); // include form
+include("js/form/form.js"); // include form and initializing form sliders
 
 include("js/about-us/about-us.js"); // video player
-
-// include("js/video/video.js"); // test video
 
 include("js/sign-form/sign-form.js"); // sign form
 

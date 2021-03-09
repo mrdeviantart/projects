@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.theme.css">
     <title>jetlend | Sign up</title>
 </head>
-<body>
+<body id="body">
 
 <div class="page sign-up">
     <!--------------------------------------Header-------------------------------------------->
@@ -20,47 +20,58 @@
         <div class="container">
             <div class="header-wrapper">
                 <a class="logo" href="index.html">
-                    <img src="img/header/logo.png" alt="jetlend logo">
+                    <picture>
+                        <source srcset="img/header/logo.webp" type="image/webp">
+                        <img src="img/header/logo.png" alt="jetlend logo">
+                    </picture>
                 </a>
 
                 <div class="menu">
                     <nav class="nav">
-                        <ul>
-                            <li>
-                                <a class="nav-link" href="#">инвесторам</a>
-                                <a class="nav-link" href="#">предпринимателям</a>
-                                <a class="nav-link" href="#">о платформе</a>
-                                <a class="nav-link" href="#">новости</a>
+                        <ul class="nav-list">
+                            <li class="nav-link">
+                                <a href="#">инвесторам</a>
                             </li>
-                        </ul>
-                    </nav>
+                            <li class="nav-link">
+                                <a href="#">предпринимателям</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">о платформе</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">новости</a>
+                            </li>
 
-                    <a href="signin.html" class="btn">
-                        <p class="btn-txt">Войти</p>
-                        <img src="img/button/enter.png" alt="enter">
-                    </a>
+                        </ul>
+                        <div class="nav-btn">
+                            <a href="signin.html" class="btn">
+                                <p class="btn-txt">Войти</p>
+                                <img src="img/button/enter.png" alt="enter">
+                            </a>
+                        </div>
+                    </nav>
                 </div>
 
                 <a href="#" class="burger-btn">
                     <span></span>
                 </a>
 
-                <div class="burger-menu">
-                    <nav class="burger-nav">
-                        <ul>
-                            <li>
-                                <a class="burger-link button" href="signin.html">
-                                    <p class="btn-txt">Войти</p>
-                                    <img src="img/button/enter.png" alt="enter">
-                                </a>
-                                <a class="burger-link" href="#">инвесторам</a>
-                                <a class="burger-link" href="#">предпринимателям</a>
-                                <a class="burger-link" href="#">о платформе</a>
-                                <a class="burger-link" href="#">новости</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                <!--                <div class="burger-menu">-->
+                <!--                    <nav class="burger-nav">-->
+                <!--                        <ul>-->
+                <!--                            <li>-->
+                <!--                                <a class="burger-link button" href="signin.html">-->
+                <!--                                    <p class="btn-txt">Войти</p>-->
+                <!--                                    <img src="img/button/enter.png" alt="enter">-->
+                <!--                                </a>-->
+                <!--                                <a class="burger-link" href="#">инвесторам</a>-->
+                <!--                                <a class="burger-link" href="#">предпринимателям</a>-->
+                <!--                                <a class="burger-link" href="#">о платформе</a>-->
+                <!--                                <a class="burger-link" href="#">новости</a>-->
+                <!--                            </li>-->
+                <!--                        </ul>-->
+                <!--                    </nav>-->
+                <!--                </div>-->
             </div>
         </div>
     </header>

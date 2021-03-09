@@ -8,27 +8,52 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.css">
-    <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.structure.css">
-    <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.theme.css">
-    <title>jetLend</title>
+<!--    <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.structure.css">-->
+<!--    <link rel="stylesheet" href="libs/jqueryui-slider/jquery-ui.theme.css">-->
+    <title>jetLend | Home</title>
 </head>
 <body id="body">
 
 <div class="page">
 
-<!--    <div id="preloader" class="preloader">-->
-<!--        <div class="preloader-container">-->
-<!--            <div class="percent">-->
-<!--                <svg>-->
-<!--                    <circle cx="70" cy="70" r="70"></circle>-->
-<!--                    <circle id="load-progress" cx="70" cy="70" r="70"></circle>-->
-<!--                </svg>-->
-<!--                <div class="number">-->
-<!--                    <span id="percentage">0%</span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div id="preloader" class="preloader">
+        <div class="preloader-container">
+            <div class="percent">
+                <svg>
+                    <circle class="circle-item" cx="70" cy="70" r="70"></circle>
+                    <circle class="circle-item" id="load-progress" cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <span id="percentage">0%</span>
+                </div>
+            </div>
+            <div class="loader">
+                <div class="dot" style="--i:0;"></div>
+                <div class="dot" style="--i:1;"></div>
+                <div class="dot" style="--i:2;"></div>
+                <div class="dot" style="--i:3;"></div>
+                <div class="dot" style="--i:4;"></div>
+                <div class="dot" style="--i:5;"></div>
+                <div class="dot" style="--i:6;"></div>
+                <div class="dot" style="--i:7;"></div>
+                <div class="dot" style="--i:8;"></div>
+                <div class="dot" style="--i:9;"></div>
+            </div>
+            <h2><code>Loading...</code></h2>
+            <div class="loader">
+                <div class="dot" style="--i:0;"></div>
+                <div class="dot" style="--i:1;"></div>
+                <div class="dot" style="--i:2;"></div>
+                <div class="dot" style="--i:3;"></div>
+                <div class="dot" style="--i:4;"></div>
+                <div class="dot" style="--i:5;"></div>
+                <div class="dot" style="--i:6;"></div>
+                <div class="dot" style="--i:7;"></div>
+                <div class="dot" style="--i:8;"></div>
+                <div class="dot" style="--i:9;"></div>
+            </div>
+        </div>
+    </div>
 
     <!-----------------------------------Video Buttons---------------------------------------->
 
@@ -183,13 +208,13 @@
 
                     <nav class="intro-nav">
                         <div class="intro-nav-wrapper">
-                            <div class="intro-nav-btn">
+                            <div class="intro-nav-btn first">
                                 <button>Обзор</button>
                             </div>
-                            <div class="intro-nav-btn">
+                            <div class="intro-nav-btn second">
                                 <button>Условия</button>
                             </div>
-                            <div class="intro-nav-btn">
+                            <div class="intro-nav-btn third">
                                 <button>Вопросы</button>
                             </div>
                         </div>
@@ -201,7 +226,7 @@
                             <h1 class="intro-title">Кредит на пополнение оборотных средств</h1>
 
                             <div class="intro-txt">
-                                <p>Сумма до 10 000 000 ₽</p>
+                                <p>Сумма до 5 000 000 ₽</p>
                                 <p>Ставка от 11% годовых</p>
                                 <p>Срок до 12 месяцев</p>
                             </div>
@@ -501,8 +526,7 @@
 
             <div class="about-us-video">
                 <div id="video-wrapper" class="video-wrapper">
-    <!--                <iframe src="https://www.youtube.com/embed/v1qhlHIXvZs?autoplay=0&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                    <video id="video" controls preload="metadata" src="img/about-us/preview.mp4" poster="img/about-us/preview.jpg"></video>
+                    <video id="video" controls preload src="img/about-us/preview.mp4" poster="img/about-us/preview.jpg"></video>
                     <button id="big-play-button" class="big-play-button">
                         <svg>
                             <use xlink:href="#play"></use>

@@ -27,15 +27,20 @@
 // }
 
 const header = $(".header");
-let scrollPrev = 0;
 
-$(window).on("scroll", function () {
-    let scrolled = $(window).scrollTop();
+if (header) {
 
-    if (scrolled > 0 && scrolled > scrollPrev) {
-        header.addClass("header--hidden");
-    } else {
-        header.removeClass("header--hidden");
-    }
-    scrollPrev = scrolled;
-});
+    let scrollPrev = 0;
+
+    $(window).on("scroll", function () {
+        let scrolled = $(window).scrollTop();
+
+        if (scrolled > 0 && scrolled > scrollPrev) {
+            header.addClass("header--hidden");
+        } else {
+            header.removeClass("header--hidden");
+        }
+        scrollPrev = scrolled;
+    });
+}
+

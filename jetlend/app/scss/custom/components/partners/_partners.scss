@@ -40,6 +40,7 @@
         box-shadow: 8px 8px 4px rgba($black, .15);
 
         &:hover {
+            transform: translateY(-10px);
 
             a {
                 background: $main-color;
