@@ -1,3 +1,5 @@
+"use strict";
+
 //for including .js files
 function include(url) {
     let script = document.createElement('script');

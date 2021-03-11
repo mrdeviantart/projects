@@ -22,9 +22,9 @@ if(preloader) {
 // function imageLoaded() {
 //     imgVidLoadedCount++;
 //     let percentageCount = (((100 / imgVidTotalCount) * imgVidLoadedCount) << 0);
-//     // let loadPercent = 440 - (440 * +percentageCount) / 100;
-//     // loadProgress.style.strokeDashoffset = `${loadPercent}`;
-//     // percentage.innerHTML = percentageCount + "%";
+//     let loadPercent = 440 - (440 * +percentageCount) / 100;
+//     loadProgress.style.strokeDashoffset = `${loadPercent}`;
+//     percentage.innerHTML = percentageCount + "%";
 //
 //     if (imgVidLoadedCount >= imgVidTotalCount) {
 //         setTimeout(function () {

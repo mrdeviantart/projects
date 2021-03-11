@@ -77,14 +77,6 @@ if (video) {
 //-----------------------
 
 // update progress duration bar ---------------------------
-// window.addEventListener("load", function () {
-//     const videoWrapperWidth = document.getElementById("video-wrapper").offsetWidth;
-//     console.log(videoWrapperWidth);
-// });
-// window.addEventListener("resize", function () {
-//     const videoWrapperWidth = document.getElementById("video-wrapper").offsetWidth;
-//     console.log(videoWrapperWidth);
-// });
 
     function updateProgress() {
         seek.value = Math.round(video.currentTime);
@@ -104,9 +96,6 @@ if (video) {
         } else {
             seekTooltip.style.left = `calc(${event.pageX - rect.left}px - 18px)`;
         }
-
-        // console.log(event.pageX);
-        // console.log(rect.left);
     }
 
     function skipAhead(event) {
